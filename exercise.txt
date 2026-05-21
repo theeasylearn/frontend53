@@ -1,0 +1,6 @@
+1) create html page to display one 300 words english story. using heading, b, i, u font tag. 
+
+2) create html page to display basis information about bhavnagar city using heading, b,i,u font tag 
+
+3) create html page to display 3 gujarati culture recipe using heading, b, i, u and font tag.
+
