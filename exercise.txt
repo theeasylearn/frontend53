@@ -4,3 +4,7 @@
 
 3) create html page to display 3 gujarati culture recipe using heading, b, i, u and font tag.
 
+4) create a web page that will display 5 IPL team and player detail information. use div, p, span, ul, ol, li tag 
+
+5) create a web page that will display 5 countries detail. display name, capital, president/PM, population, GDP, per person income and places to visit. use div, p, span, ul, ol, li tag 
+

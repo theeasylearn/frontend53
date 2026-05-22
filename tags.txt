@@ -1,0 +1,32 @@
+Tags we have learned so far 
+    br 
+    hr 
+    b 
+    i
+    u 
+    strike 
+    kbd 
+    code 
+    sup 
+    sub 
+    font 
+    h1 to h5 
+    
+text grouping tags 
+    div 
+    p 
+    span 
+
+List 
+    ul 
+    ol
+    li 
+
+Tablular format data display 
+    Table
+    thead
+    tbody 
+    tr 
+    th
+    td 
+
