@@ -8,3 +8,8 @@
 
 5) create a web page that will display 5 countries detail. display name, capital, president/PM, population, GDP, per person income and places to visit. use div, p, span, ul, ol, li tag 
 
+6) create IPL point table using all table related tags. 
+
+7) create table that will display country name, area, capital, currency, president name in table format of 10 asian countries. 
+
+8) create image gallery that will display 20 photos of bhavnagar city in table format. 

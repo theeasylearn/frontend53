@@ -26,7 +26,19 @@ Tablular format data display
     Table
     thead
     tbody 
+    tfoot
     tr 
     th
     td 
+
+other tags 
+    anchor
+        is used to create hyperlinks upon which if user clicks other page will be opened  
+    img 
+        is used to display images 
+    iframe
+        is used to display video
+    pre
+        is used to display text as it 
+
 
