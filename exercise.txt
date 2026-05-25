@@ -12,4 +12,9 @@
 
 7) create table that will display country name, area, capital, currency, president name in table format of 10 asian countries. 
 
-8) create image gallery that will display 20 photos of bhavnagar city in table format. 
+8) create image gallery that will display 20 photos of bhavnagar city in table format.
+https://images.template.net/wp-content/uploads/2018/11/Free-Basic-Resume-Template2.jpg
+
+
+9) create your resume using all output related html tags. 
+
