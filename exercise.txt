@@ -18,3 +18,21 @@ https://images.template.net/wp-content/uploads/2018/11/Free-Basic-Resume-Templat
 
 9) create your resume using all output related html tags. 
 
+
+10) create web page that has horizontal for for change password web page. 
+11) create web page that has horizontal for for forgot password web page. 
+
+12) create web page that has register page which accept below input 
+        create vertical form (one line has message and other line has input)
+        fullname 
+        gender 
+        email
+        mobile
+        dob 
+        height (select) (4.5 to 6.5)
+        martial status 
+        no of child (select)
+        blood group (select)
+        hobbies (checkbox)
+        language (checkbox)
+        button

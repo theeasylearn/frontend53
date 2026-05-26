@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Search Bus</h1>
+    <form action="success.html" method="post">
+        <table border="1" cellpadding="5" align="center" width="90%">
+           <tr>
+            <td>
+                <label for="source">Source</label> <br/>
+                <input id="source" type="text" name="source" required />
+            </td>
+            <td>
+                <label for="destination">Destination</label> <br/> 
+                <input id="destination" type="text" name="destination" required />
+            </td>
+            <td>
+                <label for="journey_date">Journey date</label> <br/>
+                <input id="journey_date" type="date" name="journey_date" required />
+            </td>
+            <td>
+                <label>Select Bus Type</label> <br/>
+                <label for="ac">
+                    <input type="radio" name="bus_type" id="ac" value="1" required /> AC 
+                </label>
+                <label for="express">
+                    <input type="radio" name="bus_type" id="express" value="2" required /> Express
+                </label>
+                <label for="sleeper">
+                    <input type="radio" name="bus_type" id="sleeper" value="3" required /> Sleeper
+                </label>
+                <label for="local">
+                    <input type="radio" name="bus_type" id="local" value="4" required /> Local
+                </label>
+            </td>
+            <td>
+                <label for="seats">No of seats</label> <br/>
+                <select name="seats" id="seats" required>
+                    <option value="">Select</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+            </td>
+            <td>
+                <label for="ladies">
+                    <input type="checkbox" name="ladies" value="1" /> Single Leady
+                </label>
+            </td>
+            <td>
+                <input type="submit" name="submit" value="Search" />
+                <input type="reset" name="clear" value="clear all" />
+            </td>
+           </tr>
+        </table>
+    </form>
+</body>
+</html>

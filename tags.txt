@@ -22,7 +22,7 @@ List
     ol
     li 
 
-Tablular format data display 
+Tabular format data display 
     Table
     thead
     tbody 
