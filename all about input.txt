@@ -27,3 +27,19 @@ there are only 4 tags we used to take any type of input from user
     we use button tag for buttons. 
 
 all input must be inside form tag, then only input will be submitted to server 
+------------------------------------------------------------------------------
+
+form can be submitted to server on specific page using either get or post method. 
+
+GET 
+  get method can submit only text type of input. file can not be submitted using get method. 
+  maximum input submitted by get method 4 KB. 
+  get method input appears in web browsers address bar which user can see or edit as well. therefore we should use get method very less. 
+  we must not use get method to submit confidential information to server like email,mobile,password,otp etc to server. 
+  get method is not secure, therefore we should use avoid it as much as possible. 
+
+POST 
+    post method can submit  text & file type of input to server. 
+    there is no limit of post method. mean we can submit any number of input, any size of input to server. however in practical server might have limit on how much data can be submitted to server. 
+    input submitted using post do not appear browsers address bar. therefore post method is relatively secure compare to get method.
+    we should use post method in most cases. 

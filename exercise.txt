@@ -36,3 +36,6 @@ https://images.template.net/wp-content/uploads/2018/11/Free-Basic-Resume-Templat
         hobbies (checkbox)
         language (checkbox)
         button
+
+13) create registration page for shaadi.com 
+
