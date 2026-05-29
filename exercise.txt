@@ -1,0 +1,27 @@
+1) create web page that display 5 Gujarati food recipe using
+    article, header, footer, and heading, table and img tag. 
+
+2) create web page that will display 5 tourist destination (non religious) out of india but in asia using 
+     article, header, footer, and heading, table and img tag. 
+
+3) create web page that will display 4 famous scientist of india information
+     article, header, footer, and heading, table and img tag. 
+
+4) edit 2_aside_section.html add 3rd column in table tag. this should display image of the recipe. 
+
+5) create web page that will display 
+     5 tourist destination of Gujarat 
+     5 tourist destination of Maharastra
+     5 tourist destination of Madhya pradesh
+use section, article, aside, header, footer image, table, font, tag
+
+
+6) create web page that will display 
+     5 famous comedy TV SHOW in india 
+     5 famous Reality TV SHOW in india 
+     5 famous comedy daily soap (family drama) in india 
+use section, article, aside, header, footer image, table, font, tag
+
+7) create web page that option to play audio of 5 different animal 
+
+8) create web page that use datalist tag that help user to search for country
