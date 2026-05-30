@@ -25,3 +25,6 @@ use section, article, aside, header, footer image, table, font, tag
 7) create web page that option to play audio of 5 different animal 
 
 8) create web page that use datalist tag that help user to search for country
+
+9) create web page that will display 18 adhyay of geeta using details, summery, figure, figcaption, image tag etc. 
+
