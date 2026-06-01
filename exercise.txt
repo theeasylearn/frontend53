@@ -28,3 +28,10 @@ use section, article, aside, header, footer image, table, font, tag
 
 9) create web page that will display 18 adhyay of geeta using details, summery, figure, figcaption, image tag etc. 
 
+10) create web page that display video of any animal. download and store video into video folder of your project folder. 
+
+
+11) create web page that display video of himaliya. download and store video into video folder of your project. 
+
+
+
