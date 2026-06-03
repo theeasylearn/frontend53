@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>form related attributes</h1>
+    <hr />
+    <form action="success.html" method="post" autocomplete="on" novalidate>
+        <label for="fullname">Fullname</label>
+        <input type="text" id="fullname" name="fullname" autofocus  required />
+        <br/>
+        <label for="city">City</label>
+        <input type="text" id="city" name="city"  required />
+        <br>
+        <label for="pincode">Pincode</label>
+        <input type="number" id="pincode" name="pincode"  required />
+        <br>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email"  required autocomplete="off" />
+        <input type="submit" name="submit" value="submit my form" />
+        <input type="reset" name="reset" value="clear all " />
+    </form>
+</body>
+</html>
