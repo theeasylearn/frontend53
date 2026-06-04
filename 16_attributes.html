@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>attributes in html tag</h1>
+    <form action="success.html" method="post">
+        <table border="2" width="50%" align="center" cellpadding="10">
+            <tr>
+                <td>
+                    <input type="text" name="fullname" placeholder="Enter your fullename" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- example abcde1234z -->
+                    <input type="text" name="pancard" placeholder="enter your pancard no " required pattern="[A-Za-z]{5}[0-9]{4}[A-Za-z]{1}"  />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="pancard_photo">Select pancard image</label>
+                    <input id="pancard_photo" type="file" name="pancard_photo" required
+                    accept="image/*" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- 1234 1234 1234 -->
+                    <input type="text" name="aadhar_card" placeholder="enter your aadhar card no " pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="aadhar_card_pdf"></label>
+                    <input id="aadhar_card_pdf" required type="file" multiple name="aadhar_card_pdf"  accept="application/pdf"  />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="submit" value="submit my form" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
