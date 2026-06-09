@@ -1,17 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
         /* universal selector */
-        *
-        {
-            margin:0px;
-            padding:0px;
+        * {
+            margin: 0px;
+            padding: 0px;
             letter-spacing: 1px;
+        }
+
+        /* type selector */
+        /* div tag is block tag */
+        div {
+            background-color: beige;
+            /* gap between 2 tags margin */
+            margin-bottom: 20px;
+            /* gap between parent child  */
+            padding: 10px;
+            /* set width  */
+            width: calc(100vw / 3.2);
+            /* set height */
+            height: 400px;
+            /* overflow is used to set how content overflow will be handled */
+            overflow: scroll;
+            /* set div tag aside to each other */
+            display: inline-block;
+            /* set border */
+            /* border:2px dotted brown; */
+            /* or */
+            border-width: 2px;
+            border-style: dashed;
+            border-color: brown;
+
+            /* set border curv */
+            border-radius: 20px;
+
+            /* set shadow for box */
+            box-shadow: 4px 4px 8px brown;
         }
     </style>
 </head>
