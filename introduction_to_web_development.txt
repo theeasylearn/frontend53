@@ -1,0 +1,49 @@
+Web Development using M.E.R.N. stack
+
+M = Mysql & MongoDB
+E = Express JS 
+R = React js 
+N = Node JS 
+
+what is web Development?
+web Development is process of developing web site & web application that will be used to access interest. in simple language it is branch of computer engineering where candidate learn how to develop web site and web application using web technologies 
+
+some of the web technologies
+    - HTML 
+    - CSS 
+    - Javascript
+    - React js 
+    - node js 
+    - Express JS 
+    - MYSQL & MongoDB
+
+Web application that has 2 parts 
+-----------------------------------
+1) Frontend 
+   Frontend means technologies that is used to develop part of the web application by which user can view output and provide input & interact with web application. you can compare Frontend of web application with Restaurant dinning area. 
+
+   H.T.M.L. 
+    - Hypertext markup language. It is used to create web pages of web sites or web application. it create basic structure of web page. but it will not look attractive to the users. it is used to display output & accept input from user.    
+   
+   C.S.S. 
+    - cascading style sheet. it is used to apply attractive formatting (style) to the web page. 
+
+   Javascript
+     - Javascript is used to connect web pages with server, dynamic output generate, input validation. 
+
+    React js 
+      - it is Javascript Library that is used to perform frequently required task via function.
+
+       
+2) Backend
+   Backend means technologies that is used to develop part of the web application which process the data and provide output to Frontend. web application user can not directly access Backend. Backend end is always access via Frontend. Backend end can be compare with restaurant kitchen.
+
+   Node JS 
+  
+   MYSQL & MongoDB
+
+
+Web developer position/Role 
+    Frontend Developer 
+    Backend Developer 
+    Fullstack Developer 

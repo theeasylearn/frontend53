@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /* class selector style */
+        .site-header {
+            background-color: #eeeeee;
+            /* display children horizontally */
+            display: flex;
+
+            /* display child at different end(left center right) */
+            justify-content: space-between;
+            /* set vertical aligment */
+            align-items: center;
+            /* make header sticky (always appears at specific position) */
+            position: sticky;
+
+            /* it will be sticky at top */
+            top: 0px;
+            left: 0px;
+            box-shadow: 5px 5px 5px gainsboro;
+        }
+
+        .menu {
+            width: 30%;
+            display: flex;
+            justify-content: space-around;
+            /* remove bullet */
+            list-style-type: none;
+        }
+
+        .site-footer {
+            display: flex;
+            position: sticky;
+            bottom: 0px;
+            left: 0px;
+            background-color: #eeeeee;
+        }
+
+        /* css select ul tag which is child of site-footer */
+        .site-footer>ul {
+            display: flex;
+            list-style-type: none;
+            justify-content: space-around;
+        }
+
+        /* css select all tag which is child of site-footer */
+        .site-footer>* {
+            width: 33.33%;
+        }
+
+        .site-content {
+            display: flex;
+            /* wrap content after 100% width is used */
+            flex-wrap: wrap;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .site-content>article 
+        {
+            /* width does not include border */
+            width:33.33%;
+            border: 1px solid black;
+            box-sizing: border-box;
+            padding:5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <img src="site_icon.png" alt="">
+        <h1>
+            THE EASYLEARN ACADEMY
+        </h1>
+        <ul class="menu">
+            <li><a href=""><i class="fa-solid fa-house"></i> Home </a></li>
+            <li><a href=""><i class="fa-solid fa-person"></i> About us</a></li>
+            <li><a href=""><i class="fa-solid fa-book"></i> Courses</a></li>
+            <li><a href=""><i class="fa-solid fa-user-graduate"></i> Career</a></li>
+            <li><a href=""><i class="fa-solid fa-mobile-button"></i> Contact us</a></li>
+        </ul>
+    </header>
+    <section class="site-content">
+        <article>
+            <header>
+                <h3>Sample heading</h3>
+            </header>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia deserunt perspiciatis, ullam dolor,
+                nostrum reprehenderit molestiae a ab commodi facilis quas sunt architecto tempora tempore adipisci
+                neque, recusandae in! Quibusdam, accusantium laboriosam ullam, quam facilis rem totam eum tempore dolore
+                incidunt, doloribus ab perferendis. Provident similique quibusdam exercitationem, totam sapiente
+                praesentium sequi soluta saepe ex numquam modi quaerat temporibus aliquid repellat aliquam at asperiores
+                error voluptate reprehenderit porro consequatur, in sint? Libero natus nostrum nisi ex quidem ducimus
+                recusandae obcaecati dicta optio. Illum quaerat doloremque soluta quos debitis libero nihil totam modi?
+                Eum provident cum quod ea itaque, ad dolor. Minima, pariatur animi? Accusamus cupiditate ullam beatae
+                obcaecati quia in pariatur illum ea iste eum? Aspernatur veniam delectus quas quia asperiores animi amet
+                hic repellendus quam sapiente, possimus illo sunt iste, id optio soluta, molestias dolore. Blanditiis
+                excepturi modi maxime voluptatibus nisi doloribus fugit? Quisquam non fuga vitae sint exercitationem
+                adipisci corrupti pariatur officiis alias? Quod molestiae quam velit. Nostrum quasi corrupti accusantium
+                non similique optio aspernatur ducimus illum, ad ea temporibus officia nihil sint culpa molestias ut
+                quam fugiat nemo accusamus exercitationem architecto possimus deserunt. Excepturi doloremque fugit ullam
+                consequuntur assumenda illum eos quam? Eius eum facere, expedita iusto numquam voluptatibus earum eos
+                laudantium, placeat dignissimos animi rem at impedit consequuntur autem suscipit explicabo sequi! Odio,
+                similique! Consectetur assumenda qui odit nostrum consequatur dolorum repellendus, debitis magnam quos
+                sint ab quod illum, deleniti expedita, a iusto dicta corporis suscipit. Laborum esse atque sunt
+                distinctio omnis tempore incidunt provident dolore! Autem, deserunt vitae adipisci quam vel architecto
+                eum! Cum earum velit totam odio sit quasi doloribus non optio molestias eum mollitia quas distinctio
+                praesentium natus commodi consequuntur sapiente, molestiae deleniti? Iure molestias impedit cupiditate
+                suscipit? In, blanditiis unde! Eveniet soluta at placeat ipsum perspiciatis cumque reprehenderit
+                suscipit ratione ad amet?</p>
+        </article>
+
+        <article>
+            <header>
+                <h3>Sample heading</h3>
+            </header>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia deserunt perspiciatis, ullam dolor,
+                nostrum reprehenderit molestiae a ab commodi facilis quas sunt architecto tempora tempore adipisci
+                neque, recusandae in! Quibusdam, accusantium laboriosam ullam, quam facilis rem totam eum tempore dolore
+                incidunt, doloribus ab perferendis. Provident similique quibusdam exercitationem, totam sapiente
+                praesentium sequi soluta saepe ex numquam modi quaerat temporibus aliquid repellat aliquam at asperiores
+                error voluptate reprehenderit porro consequatur, in sint? Libero natus nostrum nisi ex quidem ducimus
+                recusandae obcaecati dicta optio. Illum quaerat doloremque soluta quos debitis libero nihil totam modi?
+                Eum provident cum quod ea itaque, ad dolor. Minima, pariatur animi? Accusamus cupiditate ullam beatae
+                obcaecati quia in pariatur illum ea iste eum? Aspernatur veniam delectus quas quia asperiores animi amet
+                hic repellendus quam sapiente, possimus illo sunt iste, id optio soluta, molestias dolore. Blanditiis
+                excepturi modi maxime voluptatibus nisi doloribus fugit? Quisquam non fuga vitae sint exercitationem
+                adipisci corrupti pariatur officiis alias? Quod molestiae quam velit. Nostrum quasi corrupti accusantium
+                non similique optio aspernatur ducimus illum, ad ea temporibus officia nihil sint culpa molestias ut
+                quam fugiat nemo accusamus exercitationem architecto possimus deserunt. Excepturi doloremque fugit ullam
+                consequuntur assumenda illum eos quam? Eius eum facere, expedita iusto numquam voluptatibus earum eos
+                laudantium, placeat dignissimos animi rem at impedit consequuntur autem suscipit explicabo sequi! Odio,
+                similique! Consectetur assumenda qui odit nostrum consequatur dolorum repellendus, debitis magnam quos
+                sint ab quod illum, deleniti expedita, a iusto dicta corporis suscipit. Laborum esse atque sunt
+                distinctio omnis tempore incidunt provident dolore! Autem, deserunt vitae adipisci quam vel architecto
+                eum! Cum earum velit totam odio sit quasi doloribus non optio molestias eum mollitia quas distinctio
+                praesentium natus commodi consequuntur sapiente, molestiae deleniti? Iure molestias impedit cupiditate
+                suscipit? In, blanditiis unde! Eveniet soluta at placeat ipsum perspiciatis cumque reprehenderit
+                suscipit ratione ad amet?</p>
+        </article>
+
+        <article>
+            <header>
+                <h3>Sample heading</h3>
+            </header>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia deserunt perspiciatis, ullam dolor,
+                nostrum reprehenderit molestiae a ab commodi facilis quas sunt architecto tempora tempore adipisci
+                neque, recusandae in! Quibusdam, accusantium laboriosam ullam, quam facilis rem totam eum tempore dolore
+                incidunt, doloribus ab perferendis. Provident similique quibusdam exercitationem, totam sapiente
+                praesentium sequi soluta saepe ex numquam modi quaerat temporibus aliquid repellat aliquam at asperiores
+                error voluptate reprehenderit porro consequatur, in sint? Libero natus nostrum nisi ex quidem ducimus
+                recusandae obcaecati dicta optio. Illum quaerat doloremque soluta quos debitis libero nihil totam modi?
+                Eum provident cum quod ea itaque, ad dolor. Minima, pariatur animi? Accusamus cupiditate ullam beatae
+                obcaecati quia in pariatur illum ea iste eum? Aspernatur veniam delectus quas quia asperiores animi amet
+                hic repellendus quam sapiente, possimus illo sunt iste, id optio soluta, molestias dolore. Blanditiis
+                excepturi modi maxime voluptatibus nisi doloribus fugit? Quisquam non fuga vitae sint exercitationem
+                adipisci corrupti pariatur officiis alias? Quod molestiae quam velit. Nostrum quasi corrupti accusantium
+                non similique optio aspernatur ducimus illum, ad ea temporibus officia nihil sint culpa molestias ut
+                quam fugiat nemo accusamus exercitationem architecto possimus deserunt. Excepturi doloremque fugit ullam
+                consequuntur assumenda illum eos quam? Eius eum facere, expedita iusto numquam voluptatibus earum eos
+                laudantium, placeat dignissimos animi rem at impedit consequuntur autem suscipit explicabo sequi! Odio,
+                similique! Consectetur assumenda qui odit nostrum consequatur dolorum repellendus, debitis magnam quos
+                sint ab quod illum, deleniti expedita, a iusto dicta corporis suscipit. Laborum esse atque sunt
+                distinctio omnis tempore incidunt provident dolore! Autem, deserunt vitae adipisci quam vel architecto
+                eum! Cum earum velit totam odio sit quasi doloribus non optio molestias eum mollitia quas distinctio
+                praesentium natus commodi consequuntur sapiente, molestiae deleniti? Iure molestias impedit cupiditate
+                suscipit? In, blanditiis unde! Eveniet soluta at placeat ipsum perspiciatis cumque reprehenderit
+                suscipit ratione ad amet?</p>
+        </article>
+
+        <article>
+            <header>
+                <h3>Sample heading</h3>
+            </header>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia deserunt perspiciatis, ullam dolor,
+                nostrum reprehenderit molestiae a ab commodi facilis quas sunt architecto tempora tempore adipisci
+                neque, recusandae in! Quibusdam, accusantium laboriosam ullam, quam facilis rem totam eum tempore dolore
+                incidunt, doloribus ab perferendis. Provident similique quibusdam exercitationem, totam sapiente
+                praesentium sequi soluta saepe ex numquam modi quaerat temporibus aliquid repellat aliquam at asperiores
+                error voluptate reprehenderit porro consequatur, in sint? Libero natus nostrum nisi ex quidem ducimus
+                recusandae obcaecati dicta optio. Illum quaerat doloremque soluta quos debitis libero nihil totam modi?
+                Eum provident cum quod ea itaque, ad dolor. Minima, pariatur animi? Accusamus cupiditate ullam beatae
+                obcaecati quia in pariatur illum ea iste eum? Aspernatur veniam delectus quas quia asperiores animi amet
+                hic repellendus quam sapiente, possimus illo sunt iste, id optio soluta, molestias dolore. Blanditiis
+                excepturi modi maxime voluptatibus nisi doloribus fugit? Quisquam non fuga vitae sint exercitationem
+                adipisci corrupti pariatur officiis alias? Quod molestiae quam velit. Nostrum quasi corrupti accusantium
+                non similique optio aspernatur ducimus illum, ad ea temporibus officia nihil sint culpa molestias ut
+                quam fugiat nemo accusamus exercitationem architecto possimus deserunt. Excepturi doloremque fugit ullam
+                consequuntur assumenda illum eos quam? Eius eum facere, expedita iusto numquam voluptatibus earum eos
+                laudantium, placeat dignissimos animi rem at impedit consequuntur autem suscipit explicabo sequi! Odio,
+                similique! Consectetur assumenda qui odit nostrum consequatur dolorum repellendus, debitis magnam quos
+                sint ab quod illum, deleniti expedita, a iusto dicta corporis suscipit. Laborum esse atque sunt
+                distinctio omnis tempore incidunt provident dolore! Autem, deserunt vitae adipisci quam vel architecto
+                eum! Cum earum velit totam odio sit quasi doloribus non optio molestias eum mollitia quas distinctio
+                praesentium natus commodi consequuntur sapiente, molestiae deleniti? Iure molestias impedit cupiditate
+                suscipit? In, blanditiis unde! Eveniet soluta at placeat ipsum perspiciatis cumque reprehenderit
+                suscipit ratione ad amet?</p>
+        </article>
+
+        <article>
+            <header>
+                <h3>Sample heading</h3>
+            </header>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia deserunt perspiciatis, ullam dolor,
+                nostrum reprehenderit molestiae a ab commodi facilis quas sunt architecto tempora tempore adipisci
+                neque, recusandae in! Quibusdam, accusantium laboriosam ullam, quam facilis rem totam eum tempore dolore
+                incidunt, doloribus ab perferendis. Provident similique quibusdam exercitationem, totam sapiente
+                praesentium sequi soluta saepe ex numquam modi quaerat temporibus aliquid repellat aliquam at asperiores
+                error voluptate reprehenderit porro consequatur, in sint? Libero natus nostrum nisi ex quidem ducimus
+                recusandae obcaecati dicta optio. Illum quaerat doloremque soluta quos debitis libero nihil totam modi?
+                Eum provident cum quod ea itaque, ad dolor. Minima, pariatur animi? Accusamus cupiditate ullam beatae
+                obcaecati quia in pariatur illum ea iste eum? Aspernatur veniam delectus quas quia asperiores animi amet
+                hic repellendus quam sapiente, possimus illo sunt iste, id optio soluta, molestias dolore. Blanditiis
+                excepturi modi maxime voluptatibus nisi doloribus fugit? Quisquam non fuga vitae sint exercitationem
+                adipisci corrupti pariatur officiis alias? Quod molestiae quam velit. Nostrum quasi corrupti accusantium
+                non similique optio aspernatur ducimus illum, ad ea temporibus officia nihil sint culpa molestias ut
+                quam fugiat nemo accusamus exercitationem architecto possimus deserunt. Excepturi doloremque fugit ullam
+                consequuntur assumenda illum eos quam? Eius eum facere, expedita iusto numquam voluptatibus earum eos
+                laudantium, placeat dignissimos animi rem at impedit consequuntur autem suscipit explicabo sequi! Odio,
+                similique! Consectetur assumenda qui odit nostrum consequatur dolorum repellendus, debitis magnam quos
+                sint ab quod illum, deleniti expedita, a iusto dicta corporis suscipit. Laborum esse atque sunt
+                distinctio omnis tempore incidunt provident dolore! Autem, deserunt vitae adipisci quam vel architecto
+                eum! Cum earum velit totam odio sit quasi doloribus non optio molestias eum mollitia quas distinctio
+                praesentium natus commodi consequuntur sapiente, molestiae deleniti? Iure molestias impedit cupiditate
+                suscipit? In, blanditiis unde! Eveniet soluta at placeat ipsum perspiciatis cumque reprehenderit
+                suscipit ratione ad amet?</p>
+        </article>
+
+        <article>
+            <header>
+                <h3>Sample heading</h3>
+            </header>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia deserunt perspiciatis, ullam dolor,
+                nostrum reprehenderit molestiae a ab commodi facilis quas sunt architecto tempora tempore adipisci
+                neque, recusandae in! Quibusdam, accusantium laboriosam ullam, quam facilis rem totam eum tempore dolore
+                incidunt, doloribus ab perferendis. Provident similique quibusdam exercitationem, totam sapiente
+                praesentium sequi soluta saepe ex numquam modi quaerat temporibus aliquid repellat aliquam at asperiores
+                error voluptate reprehenderit porro consequatur, in sint? Libero natus nostrum nisi ex quidem ducimus
+                recusandae obcaecati dicta optio. Illum quaerat doloremque soluta quos debitis libero nihil totam modi?
+                Eum provident cum quod ea itaque, ad dolor. Minima, pariatur animi? Accusamus cupiditate ullam beatae
+                obcaecati quia in pariatur illum ea iste eum? Aspernatur veniam delectus quas quia asperiores animi amet
+                hic repellendus quam sapiente, possimus illo sunt iste, id optio soluta, molestias dolore. Blanditiis
+                excepturi modi maxime voluptatibus nisi doloribus fugit? Quisquam non fuga vitae sint exercitationem
+                adipisci corrupti pariatur officiis alias? Quod molestiae quam velit. Nostrum quasi corrupti accusantium
+                non similique optio aspernatur ducimus illum, ad ea temporibus officia nihil sint culpa molestias ut
+                quam fugiat nemo accusamus exercitationem architecto possimus deserunt. Excepturi doloremque fugit ullam
+                consequuntur assumenda illum eos quam? Eius eum facere, expedita iusto numquam voluptatibus earum eos
+                laudantium, placeat dignissimos animi rem at impedit consequuntur autem suscipit explicabo sequi! Odio,
+                similique! Consectetur assumenda qui odit nostrum consequatur dolorum repellendus, debitis magnam quos
+                sint ab quod illum, deleniti expedita, a iusto dicta corporis suscipit. Laborum esse atque sunt
+                distinctio omnis tempore incidunt provident dolore! Autem, deserunt vitae adipisci quam vel architecto
+                eum! Cum earum velit totam odio sit quasi doloribus non optio molestias eum mollitia quas distinctio
+                praesentium natus commodi consequuntur sapiente, molestiae deleniti? Iure molestias impedit cupiditate
+                suscipit? In, blanditiis unde! Eveniet soluta at placeat ipsum perspiciatis cumque reprehenderit
+                suscipit ratione ad amet?</p>
+        </article>
+
+
+        
+    </section>
+    <footer class="site-footer">
+        <div>
+            <h3>THE EASYLEARN ACADEMY</h3> <br />
+            105, Eva, Surbhi Mall, Waghawadi Rd., <br />opp. akshwarwadi temple, Hill Drive, Bhavnagar, Gujarat 364001
+        </div>
+        <ul>
+            <li><a href=""><i class="fa-brands fa-2x fa-youtube"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-2x fa-square-instagram"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-2x fa-square-facebook"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-2x fa-square-x-twitter"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-2x fa-square-linkedin"></i></a></li>
+        </ul>
+        <div>
+            <h3>Map</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.676341867972!2d72.1411540739208!3d21.754069880083005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395f5a70ae66c5d9%3A0x79e1b3139eda8f90!2sThe%20Easy%20Learn%20Academy!5e0!3m2!1sen!2sin!4v1781141229259!5m2!1sen!2sin"
+                width="100%" height="150px" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/20994dd270.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
