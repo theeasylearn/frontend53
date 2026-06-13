@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0px;
+            padding:0px;
+        }
+
+        #site 
+        {
+            /*  size of the site will be equal to size of the screen */
+            height: 100vh;
+            display: grid;
+            grid-template-rows: 1fr 6fr 1fr;
+            grid-template-columns: 1fr 5fr;
+            grid-template-areas: "header header"
+                "menu content"
+                "footer footer";
+        }
+
+        #site-header 
+        {
+            background-color: brown;
+            grid-area: header;
+            /* height: 100px;  */
+        }
+        #site-menu 
+        {
+            background-color: bisque;
+            grid-area: menu;
+            /* height: 100px; */
+        }
+        #site-content
+        {
+            background-color: antiquewhite;
+            grid-area: content;
+            /* height: 100px; */
+        }
+        #site-footer 
+        {
+            background-color: burlywood;
+            grid-area: footer;
+            height: 100px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section id="site">
+        <div id="site-header">1</div>
+        <div id="site-menu">2</div>
+        <div id="site-content">3</div>
+        <div id="site-footer">4</div>
+        
+    </section>
+</body>
+
+</html>

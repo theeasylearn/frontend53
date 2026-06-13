@@ -1,0 +1,547 @@
+Flex 
+ create all design using flex. refer flex.png file 
+
+
+Grid 
+1) create design in below link 
+   https://www.specbee.com/sites/default/files/2024-03/grid-area.png
+
+2) create design in below link
+https://www.developerdrive.com/wp-content/uploads/2018/02/css-grid-nested-grid.jpg
+
+3) create design in below link
+https://miro.medium.com/v2/resize:fit:1100/format:webp/1*pRnTM0nAXqwJnc6H0JMHcQ.png
+
+**Section Name: CSS Selectors**
+
+**Easy Exercise 1**  
+* **Title:** Basic Element Selector for Navigation Menu  
+* **Difficulty Level:** Easy  
+* **Problem Statement:** Create a simple navigation bar with links (Home, About, Services, Contact). Use element selectors to style all `<a>` tags with blue text, no underline, and padding.  
+* **Expected CSS Concepts Used:** Element (tag) selectors, basic properties like color, text-decoration, padding.  
+* **Output Requirements:** Horizontal navigation bar with evenly spaced links that change color on hover (use a:hover). Provide basic HTML structure.
+
+**Easy Exercise 2**  
+* **Title:** Class Selector for Highlighted Boxes  
+* **Difficulty Level:** Easy  
+* **Problem Statement:** Create three product cards. Apply a class "highlight" to one card and use class selector to give it a yellow background and bold text.  
+* **Expected CSS Concepts Used:** Class selectors (.), background-color, font-weight.  
+* **Output Requirements:** Visually distinct highlighted card among plain ones.
+
+**Medium Exercise 1**  
+* **Title:** ID Selector for Hero Banner  
+* **Difficulty Level:** Medium  
+* **Problem Statement:** Build a hero section with a heading and button. Use an ID selector for the hero container to center content and add a background color. Style the button using a class.  
+* **Expected CSS Concepts Used:** ID selectors (#), text-align, margin/padding for centering.  
+* **Output Requirements:** Centered hero with prominent button.
+
+**Medium Exercise 2**  
+* **Title:** Combinator Selectors for Article Styling  
+* **Difficulty Level:** Medium  
+* **Problem Statement:** Create an article with paragraphs and a nested list. Use descendant and child selectors to style paragraphs inside the article differently from others and list items.  
+* **Expected CSS Concepts Used:** Descendant (space), child (>), sibling selectors.  
+* **Output Requirements:** Differentiated text styles within the article structure.
+
+**Hard Exercise**  
+* **Title:** Advanced Selectors for Interactive Form  
+* **Difficulty Level:** Hard  
+* **Problem Statement:** Design a contact form with labels, inputs, and a submit button. Use attribute selectors for required fields, pseudo-classes for focus states, and group selectors for consistent styling. Combine with previous concepts like classes.  
+* **Expected CSS Concepts Used:** Attribute selectors ([ ]), pseudo-classes (:focus, :hover), grouping, descendant selectors.  
+* **Output Requirements:** Form with visual feedback on focus/required fields; clean, professional look.  
+* **Bonus Challenge:** Add :nth-child selectors to alternate row colors if extending to a table of past messages.
+
+**Section Name: CSS Colors**
+
+**Easy Exercise 1**  
+* **Title:** Color a Simple Header  
+* **Difficulty Level:** Easy  
+* **Problem Statement:** Create a header with logo text and navigation. Use named colors to set background to navy and text to white.  
+* **Expected CSS Concepts Used:** Named colors, background-color, color.  
+* **Output Requirements:** Contrasting header.
+
+**Easy Exercise 2**  
+* **Title:** RGB Background for Cards  
+* **Difficulty Level:** Easy  
+* **Problem Statement:** Style three feature cards using RGB values for different background shades.  
+* **Expected CSS Concepts Used:** rgb() function.  
+* **Output Requirements:** Subtle color variations.
+
+**Medium Exercise 1**  
+* **Title:** HSL Themed Product Page  
+* **Difficulty Level:** Medium  
+* **Problem Statement:** Build a mini e-commerce section with product images and info. Use HSL for vibrant accents and adjust saturation/lightness for hover effects.  
+* **Expected CSS Concepts Used:** hsl(), hover transitions (basic).  
+* **Output Requirements:** Cohesive color theme.
+
+**Medium Exercise 2**  
+* **Title:** Hex and Opacity for Overlay  
+* **Difficulty Level:** Medium  
+* **Problem Statement:** Create a hero image with text overlay using hex colors and rgba for semi-transparent background.  
+* **Expected CSS Concepts Used:** #hex, rgba().  
+* **Output Requirements:** Readable text over image.
+
+**Hard Exercise**  
+* **Title:** Color Palette for Dashboard UI  
+* **Difficulty Level:** Hard  
+* **Problem Statement:** Design a simple admin dashboard sidebar and main area. Define a custom color palette using variables (if covered) or repeated values, apply to multiple elements, and use opacity for disabled states. Combine with selectors.  
+* **Expected CSS Concepts Used:** Multiple color formats, CSS variables (optional), opacity, pseudo-elements.  
+* **Output Requirements:** Professional, accessible dashboard with consistent theming.  
+* **Bonus Challenge:** Implement dark mode toggle using different color sets.
+
+**Section Name: CSS Backgrounds**
+
+**Easy Exercise 1**  
+* **Title:** Background Color for Section  
+* **Difficulty Level:** Easy  
+* **Problem Statement:** Style a testimonial section with a light background color.  
+* **Expected CSS Concepts Used:** background-color.  
+* **Output Requirements:** Distinct section.
+
+**Easy Exercise 2**  
+* **Title:** Repeating Background Pattern  
+* **Difficulty Level:** Easy  
+* **Problem Statement:** Use a small image (e.g., dots) as repeating background for a sidebar.  
+* **Expected CSS Concepts Used:** background-image, background-repeat.  
+* **Output Requirements:** Tiled pattern.
+
+**Medium Exercise 1**  
+* **Title:** Fixed Background Hero  
+* **Difficulty Level:** Medium  
+* **Problem Statement:** Create a full-width hero with a large background image that stays fixed on scroll.  
+* **Expected CSS Concepts Used:** background-attachment: fixed, background-size.  
+* **Output Requirements:** Parallax-like effect.
+
+**Medium Exercise 2**  
+* **Title:** Background Shorthand for Button  
+* **Difficulty Level:** Medium  
+* **Problem Statement:** Style gradient buttons using background shorthand with linear-gradient.  
+* **Expected CSS Concepts Used:** background shorthand, gradients.  
+* **Output Requirements:** Modern buttons.
+
+**Hard Exercise**  
+* **Title:** Multi-Layer Background Landing Page  
+* **Difficulty Level:** Hard  
+* **Problem Statement:** Build a landing page header with background image, overlay gradient, and content. Combine multiple background properties and ensure responsiveness. Integrate prior concepts like colors and selectors.  
+* **Expected CSS Concepts Used:** Multiple backgrounds, shorthand, positioning.  
+* **Output Requirements:** Eye-catching, layered hero section.  
+* **Bonus Challenge:** Add a subtle animation to the background position.
+
+**Section Name: CSS Borders**
+
+**Easy Exercise 1**  
+* **Title:** Bordered Image Gallery  
+* **Difficulty Level:** Easy  
+* **Problem Statement:** Display four images with solid borders of different colors.  
+* **Expected CSS Concepts Used:** border-style, border-color, border-width.  
+* **Output Requirements:** Framed images.
+
+**Easy Exercise 2**  
+* **Title:** Rounded Profile Cards  
+* **Difficulty Level:** Easy  
+* **Problem Statement:** Create profile cards with rounded borders.  
+* **Expected CSS Concepts Used:** border-radius.  
+* **Output Requirements:** Modern card look.
+
+**Medium Exercise 1**  
+* **Title:** Asymmetric Borders for Pricing Tiers  
+* **Difficulty Level:** Medium  
+* **Problem Statement:** Design three pricing cards with different border styles (dashed, dotted, double) and widths.  
+* **Expected CSS Concepts Used:** Individual border sides, border shorthand.  
+* **Output Requirements:** Visually distinct tiers.
+
+**Medium Exercise 2**  
+* **Title:** Border Images for Decorative Elements  
+* **Difficulty Level:** Medium  
+* **Problem Statement:** Use border-image for a decorative quote box.  
+* **Expected CSS Concepts Used:** border-image properties.  
+* **Output Requirements:** Custom bordered element.
+
+**Hard Exercise**  
+* **Title:** Interactive Border Effects for Navigation  
+* **Difficulty Level:** Hard  
+* **Problem Statement:** Create a navigation menu where links have animated border-bottom on hover and active states. Combine with box model and colors for a full menu bar.  
+* **Expected CSS Concepts Used:** Border variations, transitions (preview), pseudo-classes.  
+* **Output Requirements:** Smooth, interactive navigation.  
+* **Bonus Challenge:** Use border-radius creatively for pill-shaped buttons with multiple states.
+
+**Section Name: CSS Margins and Padding (Box Model)**
+
+**Easy Exercise 1**  
+* **Title:** Spaced Blog Posts  
+* **Difficulty Level:** Easy  
+* **Problem Statement:** Style blog preview cards with uniform padding inside and margins between them.  
+* **Expected CSS Concepts Used:** margin, padding.  
+* **Output Requirements:** Clean spacing.
+
+**Easy Exercise 2**  
+* **Title:** Centered Content Container  
+* **Difficulty Level:** Easy  
+* **Problem Statement:** Create a main content area centered with auto margins and internal padding.  
+* **Expected CSS Concepts Used:** margin: auto, padding.  
+* **Output Requirements:** Responsive container.
+
+**Medium Exercise 1**  
+* **Title:** Collapsing Margins Demo Form  
+* **Difficulty Level:** Medium  
+* **Problem Statement:** Build a form where you demonstrate and control margin collapsing between sections.  
+* **Expected CSS Concepts Used:** Box model, vertical margins.  
+* **Output Requirements:** Properly spaced form fields.
+
+**Medium Exercise 2**  
+* **Title:** Card with Inner and Outer Spacing  
+* **Difficulty Level:** Medium  
+* **Problem Statement:** Design feature cards showing difference between margin and padding effects.  
+* **Expected CSS Concepts Used:** Box model visualization via borders.  
+* **Output Requirements:** Clear visual distinction.
+
+**Hard Exercise**  
+* **Title:** Full Page Layout with Box Model  
+* **Difficulty Level:** Hard  
+* **Problem Statement:** Create a multi-section page (header, content, footer) with precise control over margins/padding to avoid overlaps and achieve balanced whitespace. Combine with borders and backgrounds.  
+* **Expected CSS Concepts Used:** Full box model, shorthand, negative margins (optional).  
+* **Output Requirements:** Professional, balanced webpage layout.  
+* **Bonus Challenge:** Add box-sizing: border-box and compare behaviors.
+
+**Section Name: CSS Text Formatting**
+
+**Easy Exercise 1**  
+* **Title:** Styled Paragraphs  
+* **Difficulty Level:** Easy  
+* **Problem Statement:** Format article text with line-height, text-align, and text-transform.  
+* **Expected CSS Concepts Used:** text properties.  
+* **Output Requirements:** Readable paragraphs.
+
+**Easy Exercise 2**  
+* **Title:** Decorative Headings  
+* **Difficulty Level:** Easy  
+* **Problem Statement:** Style h1-h3 with letter-spacing and text-shadow.  
+* **Expected CSS Concepts Used:** Advanced text styling.  
+* **Output Requirements:** Eye-catching headings.
+
+**Medium Exercise 1**  
+* **Title:** Multi-Column Text Layout  
+* **Difficulty Level:** Medium  
+* **Problem Statement:** Create a newspaper-style section with columns and text justification.  
+* **Expected CSS Concepts Used:** column-count, text-align.  
+* **Output Requirements:** Flowing multi-column text.
+
+**Medium Exercise 2**  
+* **Title:** Link and Emphasis Styling  
+* **Difficulty Level:** Medium  
+* **Problem Statement:** Style inline text elements (strong, em, a) consistently in a content area.  
+* **Expected CSS Concepts Used:** text-decoration variations.  
+* **Output Requirements:** Professional inline styling.
+
+**Hard Exercise**  
+* **Title:** Typography-Rich Landing Page Hero  
+* **Difficulty Level:** Hard  
+* **Problem Statement:** Design a hero section with multiple text elements using advanced formatting, shadows, and alignment. Integrate with backgrounds and prior box model.  
+* **Expected CSS Concepts Used:** Comprehensive text properties, combinations.  
+* **Output Requirements:** Impactful, readable hero text.  
+* **Bonus Challenge:** Add text overflow handling for responsive cases.
+
+**Section Name: CSS Fonts**
+
+**Easy Exercise 1**  
+* **Title:** Web Safe Font Stack  
+* **Difficulty Level:** Easy  
+* **Problem Statement:** Apply font-family stack to body and headings.  
+* **Expected CSS Concepts Used:** font-family.  
+* **Output Requirements:** Consistent typography.
+
+**Easy Exercise 2**  
+* **Title:** Font Size and Weight Variations  
+* **Difficulty Level:** Easy  
+* **Problem Statement:** Create a style guide showing different font-sizes and weights.  
+* **Expected CSS Concepts Used:** font-size, font-weight.  
+* **Output Requirements:** Typography scale.
+
+**Medium Exercise 1**  
+* **Title:** Google Fonts Integration  
+* **Difficulty Level:** Medium  
+* **Problem Statement:** Import and use a Google Font for a blog header and body.  
+* **Expected CSS Concepts Used:** @import or link, font properties.  
+* **Output Requirements:** Custom font application.
+
+**Medium Exercise 2**  
+* **Title:** Font Styling for Quotes  
+* **Difficulty Level:** Medium  
+* **Problem Statement:** Style blockquotes with italic, custom font, and line-height.  
+* **Expected CSS Concepts Used:** font-style, font-variant.  
+* **Output Requirements:** Elegant quotes.
+
+**Hard Exercise**  
+* **Title:** Responsive Typography System  
+* **Difficulty Level:** Hard  
+* **Problem Statement:** Build a complete article page with a font system (sizes, families) that scales well. Combine with text formatting and selectors for hierarchy.  
+* **Expected CSS Concepts Used:** Fluid typography, multiple font uses.  
+* **Output Requirements:** Polished, readable article.  
+* **Bonus Challenge:** Use rem/em units and media queries preview.
+
+**Section Name: CSS Display**
+
+**Easy Exercise 1**  
+* **Title:** Inline vs Block Elements  
+* **Difficulty Level:** Easy  
+* **Problem Statement:** Demonstrate display: inline, block, inline-block with spans and divs.  
+* **Expected CSS Concepts Used:** display property.  
+* **Output Requirements:** Side-by-side comparison.
+
+**Easy Exercise 2**  
+* **Title:** Hide and Show Elements  
+* **Difficulty Level:** Easy  
+* **Problem Statement:** Create toggleable sections using display: none vs visibility.  
+* **Expected CSS Concepts Used:** display: none.  
+* **Output Requirements:** Functional show/hide.
+
+**Medium Exercise 1**  
+* **Title:** Horizontal Menu with Inline-Block  
+* **Difficulty Level:** Medium  
+* **Problem Statement:** Build a navigation menu using display: inline-block.  
+* **Expected CSS Concepts Used:** Inline-block for layouts.  
+* **Output Requirements:** Aligned menu items.
+
+**Medium Exercise 2**  
+* **Title:** Table-like Layout with Display  
+* **Difficulty Level:** Medium  
+* **Problem Statement:** Create a pricing table using display: table properties.  
+* **Expected CSS Concepts Used:** display: table, table-cell.  
+* **Output Requirements:** Grid-like without actual table.
+
+**Hard Exercise**  
+* **Title:** Multi-Component UI with Display Controls  
+* **Difficulty Level:** Hard  
+* **Problem Statement:** Design a dashboard with sidebar (display control), cards, and modals. Combine display with box model and positioning previews.  
+* **Expected CSS Concepts Used:** Various display values, combinations from prior sections.  
+* **Output Requirements:** Functional component layout.  
+* **Bonus Challenge:** Add JavaScript-free toggle using :target or similar.
+
+**Section Name: CSS Positioning**
+
+**Easy Exercise 1**  
+* **Title:** Relative Positioned Badge  
+* **Difficulty Level:** Easy  
+* **Problem Statement:** Add a "New" badge positioned relative to a product image.  
+* **Expected CSS Concepts Used:** position: relative, top/left.  
+* **Output Requirements:** Offset badge.
+
+**Easy Exercise 2**  
+* **Title:** Fixed Footer  
+* **Difficulty Level:** Easy  
+* **Problem Statement:** Create a sticky footer using fixed positioning.  
+* **Expected CSS Concepts Used:** position: fixed.  
+* **Output Requirements:** Always-visible footer.
+
+**Medium Exercise 1**  
+* **Title:** Absolute Positioned Modal  
+* **Difficulty Level:** Medium  
+* **Problem Statement:** Build a centered modal dialog using absolute positioning.  
+* **Expected CSS Concepts Used:** position: absolute, z-index.  
+* **Output Requirements:** Overlay modal.
+
+**Medium Exercise 2**  
+* **Title:** Sticky Navigation  
+* **Difficulty Level:** Medium  
+* **Problem Statement:** Make a navbar sticky on scroll.  
+* **Expected CSS Concepts Used:** position: sticky.  
+* **Output Requirements:** Smooth scrolling behavior.
+
+**Hard Exercise**  
+* **Title:** Layered Hero with Multiple Positionings  
+* **Difficulty Level:** Hard  
+* **Problem Statement:** Create a complex hero with absolutely positioned elements (text, buttons, decorative shapes) over a background. Combine with previous sections for full effect.  
+* **Expected CSS Concepts Used:** relative/absolute/fixed combos, z-index stacking.  
+* **Output Requirements:** Dynamic, layered composition.  
+* **Bonus Challenge:** Make elements responsive with viewport units.
+
+**Section Name: CSS Flexbox**
+
+**Easy Exercise 1**  
+* **Title:** Centered Flex Container  
+* **Difficulty Level:** Easy  
+* **Problem Statement:** Use flexbox to center a login form vertically and horizontally.  
+* **Expected CSS Concepts Used:** display: flex, justify-content, align-items.  
+* **Output Requirements:** Perfectly centered form.
+
+**Easy Exercise 2**  
+* **Title:** Horizontal Card Row  
+* **Difficulty Level:** Easy  
+* **Problem Statement:** Display feature cards in a flexible row.  
+* **Expected CSS Concepts Used:** flex-direction, flex-wrap.  
+* **Output Requirements:** Responsive row.
+
+**Medium Exercise 1**  
+* **Title:** Flexible Navigation with Grow/Shrink  
+* **Difficulty Level:** Medium  
+* **Problem Statement:** Build a nav where logo grows and links distribute space.  
+* **Expected CSS Concepts Used:** flex-grow, flex-shrink, basis.  
+* **Output Requirements:** Adaptive menu.
+
+**Medium Exercise 2**  
+* **Title:** Holy Grail Layout with Flex  
+* **Difficulty Level:** Medium  
+* **Problem Statement:** Implement a basic holy grail layout (header, footer, sidebar, content) using flex.  
+* **Expected CSS Concepts Used:** Nested flex, order property.  
+* **Output Requirements:** Classic layout.
+
+**Hard Exercise**  
+* **Title:** Responsive Product Gallery with Flex  
+* **Difficulty Level:** Hard  
+* **Problem Statement:** Create an advanced product grid/gallery that switches between row and column on resize, with aligned items and gaps. Combine with media queries preview and prior concepts.  
+* **Expected CSS Concepts Used:** Advanced flex properties, nesting, responsiveness.  
+* **Output Requirements:** Dynamic e-commerce style gallery.  
+* **Bonus Challenge:** Add flex for equal height cards.
+
+**Section Name: CSS Grid**
+
+**Easy Exercise 1**  
+* **Title:** Basic Grid Gallery  
+* **Difficulty Level:** Easy  
+* **Problem Statement:** Create a simple image grid with 3 columns.  
+* **Expected CSS Concepts Used:** display: grid, grid-template-columns.  
+* **Output Requirements:** Even grid.
+
+**Easy Exercise 2**  
+* **Title:** Grid Areas for Header/Footer  
+* **Difficulty Level:** Easy  
+* **Problem Statement:** Define named grid areas for a basic page structure.  
+* **Expected CSS Concepts Used:** grid-template-areas.  
+* **Output Requirements:** Structured layout.
+
+**Medium Exercise 1**  
+* **Title:** Responsive Grid Dashboard  
+* **Difficulty Level:** Medium  
+* **Problem Statement:** Build a metrics dashboard with varying card spans.  
+* **Expected CSS Concepts Used:** grid-column, grid-row span.  
+* **Output Requirements:** Varied item sizes.
+
+**Medium Exercise 2**  
+* **Title:** Masonry-like Grid with Gaps  
+* **Difficulty Level:** Medium  
+* **Problem Statement:** Create a photo feed with explicit gaps and auto-fit.  
+* **Expected CSS Concepts Used:** repeat(auto-fit), gap properties.  
+* **Output Requirements:** Flowing grid.
+
+**Hard Exercise**  
+* **Title:** Complex Magazine Layout with Grid  
+* **Difficulty Level:** Hard  
+* **Problem Statement:** Design a news/magazine homepage using CSS Grid with overlapping areas, spans, and responsive tracks. Integrate flex where suitable and prior styling.  
+* **Expected CSS Concepts Used:** Full grid mastery, combinations.  
+* **Output Requirements:** Professional multi-column layout.  
+* **Bonus Challenge:** Implement implicit grid behavior.
+
+**Section Name: CSS Transitions**
+
+**Easy Exercise 1**  
+* **Title:** Hover Color Transition  
+* **Difficulty Level:** Easy  
+* **Problem Statement:** Add smooth color change to buttons on hover.  
+* **Expected CSS Concepts Used:** transition property.  
+* **Output Requirements:** Smooth effect.
+
+**Easy Exercise 2**  
+* **Title:** Scale Image on Hover  
+* **Difficulty Level:** Easy  
+* **Problem Statement:** Scale up images slightly with transition.  
+* **Expected CSS Concepts Used:** transform with transition.  
+* **Output Requirements:** Interactive gallery.
+
+**Medium Exercise 1**  
+* **Title:** Multi-Property Card Flip Transition  
+* **Difficulty Level:** Medium  
+* **Problem Statement:** Transition multiple properties (shadow, scale) on card hover.  
+* **Expected CSS Concepts Used:** transition-timing-function, multiple properties.  
+* **Output Requirements:** Rich hover effect.
+
+**Medium Exercise 2**  
+* **Title:** Sidebar Slide Transition  
+* **Difficulty Level:** Medium  
+* **Problem Statement:** Create a sliding sidebar menu with transition.  
+* **Expected CSS Concepts Used:** transform: translate.  
+* **Output Requirements:** Smooth animation.
+
+**Hard Exercise**  
+* **Title:** Interactive UI Component Transitions  
+* **Difficulty Level:** Hard  
+* **Problem Statement:** Build a set of interactive elements (tabs, accordion preview) with coordinated transitions. Combine with positioning and flex/grid.  
+* **Expected CSS Concepts Used:** Advanced transitions, timing.  
+* **Output Requirements:** Polished, engaging interface.  
+* **Bonus Challenge:** Chain transitions with delays.
+
+**Section Name: CSS Animations**
+
+**Easy Exercise 1**  
+* **Title:** Loading Spinner Animation  
+* **Difficulty Level:** Easy  
+* **Problem Statement:** Create a rotating spinner using keyframes.  
+* **Expected CSS Concepts Used:** @keyframes, animation property.  
+* **Output Requirements:** Continuous rotation.
+
+**Easy Exercise 2**  
+* **Title:** Fade-In Text Animation  
+* **Difficulty Level:** Easy  
+* **Problem Statement:** Animate text fading in on page load.  
+* **Expected CSS Concepts Used:** animation-duration, delay.  
+* **Output Requirements:** Entrance effect.
+
+**Medium Exercise 1**  
+* **Title:** Bouncing Ball or Icon  
+* **Difficulty Level:** Medium  
+* **Problem Statement:** Animate a bouncing element with keyframes.  
+* **Expected CSS Concepts Used:** Multiple keyframes, iteration.  
+* **Output Requirements:** Playful motion.
+
+**Medium Exercise 2**  
+* **Title:** Progress Bar Animation  
+* **Difficulty Level:** Medium  
+* **Problem Statement:** Animate a filling progress bar.  
+* **Expected CSS Concepts Used:** Width animation.  
+* **Output Requirements:** Dynamic progress.
+
+**Hard Exercise**  
+* **Title:** Keyframe Hero Animation Sequence  
+* **Difficulty Level:** Hard  
+* **Problem Statement:** Create a hero section with sequenced animations for multiple elements (fade, slide, scale). Combine with transitions and layouts.  
+* **Expected CSS Concepts Used:** Complex @keyframes, animation properties.  
+* **Output Requirements:** Engaging animated landing.  
+* **Bonus Challenge:** Make animations pause on hover or responsive.
+
+**Section Name: Responsive Design**
+
+**Easy Exercise 1**  
+* **Title:** Mobile-First Navigation  
+* **Difficulty Level:** Easy  
+* **Problem Statement:** Use media queries to stack nav on small screens.  
+* **Expected CSS Concepts Used:** @media, max-width.  
+* **Output Requirements:** Basic responsiveness.
+
+**Easy Exercise 2**  
+* **Title:** Fluid Images  
+* **Difficulty Level:** Easy  
+* **Problem Statement:** Make images responsive with max-width.  
+* **Expected CSS Concepts Used:** Relative units, media queries.  
+* **Output Requirements:** No overflow images.
+
+**Medium Exercise 1**  
+* **Title:** Breakpoint-Based Layout Changes  
+* **Difficulty Level:** Medium  
+* **Problem Statement:** Change grid/flex from 1 to 3 columns at different breakpoints.  
+* **Expected CSS Concepts Used:** Multiple media queries.  
+* **Output Requirements:** Adaptive layout.
+
+**Medium Exercise 2**  
+* **Title:** Viewport Units for Hero  
+* **Difficulty Level:** Medium  
+* **Problem Statement:** Use vh/vw for full-height responsive hero.  
+* **Expected CSS Concepts Used:** Viewport units.  
+* **Output Requirements:** Screen-filling section.
+
+**Hard Exercise**  
+* **Title:** Fully Responsive Portfolio Site  
+* **Difficulty Level:** Hard  
+* **Problem Statement:** Build a mini portfolio with responsive grid, flex, typography, and navigation that works across mobile, tablet, desktop. Integrate all prior concepts.  
+* **Expected CSS Concepts Used:** Comprehensive responsive techniques.  
+* **Output Requirements:** Production-ready responsive page.  
+* **Bonus Challenge:** Add mobile menu hamburger with transitions.
+
+These exercises are practical, build progressively, focus on real-world scenarios like portfolios, dashboards, e-commerce, and landing pages, and are suitable for classroom use and exams. Students should create full HTML + CSS files for each. Encourage using external stylesheets.

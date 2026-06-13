@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Design Recreation</title>
+    <style>
+        *
+        {
+            margin: 0px;
+            padding: 0px;
+        }
+        /* Main container - this holds the entire design */
+        .container {
+            width: 100vw;           /* Adjust width as needed */
+            height: 100vh;          /* Adjust height as needed */
+           
+            /* CSS Grid setup for the whole layout */
+            display: grid;
+            grid-template-rows: 100px 1fr 100px;   /* Top bar, middle content, bottom bar */
+            grid-template-columns: 1fr;          /* Single column for the whole container */
+            gap: 0px;                              /* No gap between sections */
+        }
+
+        /* Top red bar - spans full width */
+        .top-bar {
+            background-color: #e60000;  /* Bright red */
+        }
+
+        /* Middle content area */
+        .middle {
+            display: grid;                      /* Nested grid for middle section */
+            grid-template-columns: 300px 1fr;   /* Left: yellow column, Right: blue area */
+            gap: 12px;                          /* Space between yellow and blue section */
+            padding: 20px 20px 20px 20px;       /* Inner spacing */
+            
+        }
+
+        /* Yellow left panel */
+        .yellow-panel {
+            background-color: #f9a825;  /* Vibrant orange-yellow */
+            border-radius: 8px;         /* Rounded corners like in the image */
+            height: 100%;               /* Fill the full middle height */
+        }
+
+        /* Blue section on the right - contains 2x2 grid */
+        .blue-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;     /* Two equal columns */
+            grid-template-rows: 1fr 1fr;        /* Two equal rows */
+            gap: 12px;                          /* Space between blue boxes */
+        }
+
+        /* Individual light blue boxes */
+        .blue-box {
+            background-color: #a8d1e7;  /* Light sky blue */
+            border-radius: 8px;         /* Rounded corners */
+        }
+
+        /* Bottom green bar */
+        .bottom-bar {
+            background-color: #2e8b57;  /* Forest green */
+           
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <!-- Main container using CSS Grid -->
+    <div class="container">
+        <!-- Top Red Bar -->
+        <div class="top-bar"></div>
+        <!-- Middle Section -->
+        <div class="middle">
+            
+            <!-- Yellow vertical panel (left side) -->
+            <div class="yellow-panel"></div>
+            
+            <!-- Blue section (right side) - 2x2 grid -->
+            <div class="blue-section">
+                <div class="blue-box"></div>
+                <div class="blue-box"></div>
+                <div class="blue-box"></div>
+                <div class="blue-box"></div>
+            </div>
+            
+        </div>
+        <!-- Bottom Green Bar -->
+        <div class="bottom-bar"></div>
+        
+    </div>
+
+</body>
+</html>
