@@ -1,0 +1,20 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 1px;
+    line-height: 125%;
+}
+body 
+{
+    background-color: blanchedalmond;
+    color:brown
+}
+h1 
+{
+    background-color: brown;
+    color:blanchedalmond;
+    padding:10px;
+    text-shadow: 3px 3px 5px yellow;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
