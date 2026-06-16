@@ -1,0 +1,51 @@
+*
+{
+    margin:0px;
+    padding:0px;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+}
+body 
+{
+    background-color: aliceblue;
+    color:blue;
+}
+/* ID selector style */
+#menu 
+{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin-top: 30px;
+}
+/* unvisited link */
+a:link 
+{
+    background-color: blue;
+    color:white;
+    padding: 10px;
+    font-size: large;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+/* visited link */
+a:visited 
+{
+    color:yellow;
+    background-color: gainsboro;
+}
+/* hover link */
+a:hover 
+{
+    background-color: yellow;
+    color:green;
+}
+/* active link (on which user has pressed mouse button) */
+a:active 
+{
+    background-color: red;
+    color:yellow;
+}
