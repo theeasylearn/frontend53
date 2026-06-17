@@ -1,0 +1,50 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+div 
+{
+    border: 1px solid black;
+    background-color: aliceblue;
+}
+#site 
+{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 1fr 2fr 6fr 1fr;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: "one one one one"
+    "two three four five"
+    "six six six five"
+    "seven seven seven seven"
+}
+#one 
+{
+    grid-area: one;
+}
+#two 
+{
+    grid-area: two;
+}
+#three
+{
+    grid-area: three;
+}
+#four 
+{
+    grid-area: four;
+}
+#five 
+{
+    grid-area: five;
+}
+#six 
+{
+    grid-area: six;
+}
+#seven 
+{
+    grid-area: seven;
+}

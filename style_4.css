@@ -1,0 +1,40 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+    color: brown;
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+section>div {
+    height: 100px;
+    width: 100px;
+    background-color: beige;
+    border: 1px solid black;
+}
+
+section>div:first-child {
+    transition: transform 500ms linear 0s;
+}
+section>div:nth-child(2)
+{
+    transition: transform 500ms ease-in-out 100ms;
+}
+/* css select 1st div tag inside section and apply style when user set mouse pointer on it */
+section>div:first-child:hover {
+    background-color: blue;
+    transform: rotate(45deg);
+}
+section>div:nth-child(2):hover {
+     background-color: orange;
+     transform: scale(1.5,1.5);
+}
