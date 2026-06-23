@@ -545,3 +545,4 @@ https://miro.medium.com/v2/resize:fit:1100/format:webp/1*pRnTM0nAXqwJnc6H0JMHcQ.
 * **Bonus Challenge:** Add mobile menu hamburger with transitions.
 
 These exercises are practical, build progressively, focus on real-world scenarios like portfolios, dashboards, e-commerce, and landing pages, and are suitable for classroom use and exams. Students should create full HTML + CSS files for each. Encourage using external stylesheets.
+

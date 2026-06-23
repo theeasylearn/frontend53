@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1 {
+            height: 200px;
+            width: 200px;
+            border: 2px solid red;
+            font-size: 24px;
+            /* vertically and horizontally center */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        /* create animation */
+        @keyframes shape_change {
+            0% {
+                background-color: #ffffff;
+                color: black;
+                border-radius: 40px;
+            }
+
+            25% {
+                background-color: #dddddd;
+                color: black;
+                border-radius: 80px;
+            }
+
+            50% {
+                background-color: #cccccc;
+                color: black;
+                border-radius: 120px;
+            }
+
+            75% {
+                background-color: #bbbbbb;
+                color: whitesmoke;
+                border-radius: 160px;
+            }
+
+            100% {
+                background-color: black;
+                color: white;
+                border-radius: 200px;
+            }
+        }
+
+        #div1:hover {
+            animation-delay: 100ms;
+            animation-direction: normal;
+            animation-duration: 2000ms;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            animation-name: shape_change;
+            animation-timing-function: linear;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Animation</h1>
+    <hr />
+    <div id="div1">
+        T.E.L
+    </div>
+</body>
+
+</html>
