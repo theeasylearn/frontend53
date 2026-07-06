@@ -1,0 +1,282 @@
+<!-- 
+ design web page which should display 12 products. 
+each product should have name, price, description, photo (use img-fluid)
+    display 
+    display 1 product in 1 line on extra small screen
+    display 2 product in 1 line on small screen
+    display 3 product in 1 line on medium screen
+    display 4 product in 1 line on large screen
+    display 6 product in 1 line on extra large screen    
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap - Tutorials @ THE EASYLEARN ACADEMY</title>
+    <!-- bootstrap framework css CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>responsive design part 2 (shop)</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3  col-xl-2 mb-3">
+                <div class="card">
+                    <img src="http://picsum.photos/300?random=1" class="card-img-top">
+                    <div class="card-body">
+                        <h3>IPhone 17 pro max</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">6.9-inch Super Retina XDR OLED display </li>
+                            <li class="list-group-item">Heat-forged aluminum unibody design</li>
+                            <li class="list-group-item">A19 Pro chip featuring a 6-core CPU, 6-core GPU, and vapour
+                                cooling.</li>
+                            <li class="list-group-item">12GB of integrated RAM</li>
+                            <li class="list-group-item">Triple 48MP Pro Fusion camera</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                        <h6 class="fw-bold">125000</h6>
+                        <button type="button" class="btn btn-primary ">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3  col-xl-2 mb-3">
+                <div class="card">
+                    <img src="https://picsum.photos/300?random=2" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Samsung Galaxy S25 Ultra</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">6.9-inch Dynamic AMOLED 2X display</li>
+                            <li class="list-group-item">Titanium frame with Gorilla Glass Armor</li>
+                            <li class="list-group-item">Snapdragon 8 Elite processor</li>
+                            <li class="list-group-item">12GB RAM with 256GB storage</li>
+                            <li class="list-group-item">200MP quad camera system</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                        <h6 class="fw-bold">129999</h6>
+                        <button type="button" class="btn btn-primary ">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3  col-xl-2 mb-3">
+                <div class="card">
+                    <img src="https://picsum.photos/300?random=3" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Google Pixel 10 Pro XL</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">6.8-inch LTPO OLED display</li>
+                            <li class="list-group-item">Google Tensor G5 processor</li>
+                            <li class="list-group-item">16GB RAM with 256GB storage</li>
+                            <li class="list-group-item">Triple AI-powered camera setup</li>
+                            <li class="list-group-item">7 years of Android updates</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                        <h6 class="fw-bold">114999</h6>
+                        <button type="button" class="btn btn-primary ">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3  col-xl-2 mb-3">
+                <div class="card">
+                    <img src="https://picsum.photos/300?random=4" class="card-img-top">
+                    <div class="card-body">
+                        <h3>OnePlus 13</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">6.82-inch AMOLED 120Hz display</li>
+                            <li class="list-group-item">Snapdragon 8 Elite chipset</li>
+                            <li class="list-group-item">16GB RAM with 512GB storage</li>
+                            <li class="list-group-item">Hasselblad triple camera</li>
+                            <li class="list-group-item">6000mAh battery with 100W charging</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                        <h6 class="fw-bold">79999</h6>
+                        <button type="button" class="btn btn-primary ">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3  col-xl-2 mb-3">
+                <div class="card">
+                    <img src="https://picsum.photos/300?random=5" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Xiaomi 15 Ultra</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">6.73-inch AMOLED WQHD+ display</li>
+                            <li class="list-group-item">Leica-engineered quad cameras</li>
+                            <li class="list-group-item">Snapdragon 8 Elite processor</li>
+                            <li class="list-group-item">16GB RAM with 512GB storage</li>
+                            <li class="list-group-item">5410mAh battery with 90W charging</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                        <h6 class="fw-bold">109999</h6>
+                        <button type="button" class="btn btn-primary ">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3  col-xl-2 mb-3">
+                <div class="card">
+                    <img src="https://picsum.photos/300?random=6" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Nothing Phone (3)</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">6.67-inch AMOLED 120Hz display</li>
+                            <li class="list-group-item">Glyph Matrix interface</li>
+                            <li class="list-group-item">Snapdragon flagship chipset</li>
+                            <li class="list-group-item">12GB RAM with 256GB storage</li>
+                            <li class="list-group-item">50MP dual camera system</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                        <h6 class="fw-bold">62999</h6>
+                        <button type="button" class="btn btn-primary ">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3  col-xl-2 mb-3">
+                <div class="card">
+                    <img src="https://picsum.photos/300?random=7" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Motorola Edge 60 Pro</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">6.7-inch pOLED curved display</li>
+                            <li class="list-group-item">MediaTek Dimensity flagship chipset</li>
+                            <li class="list-group-item">12GB RAM with 512GB storage</li>
+                            <li class="list-group-item">50MP triple AI camera</li>
+                            <li class="list-group-item">6000mAh battery with TurboPower charging</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                        <h6 class="fw-bold">42999</h6>
+                        <button type="button" class="btn btn-primary ">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3  col-xl-2 mb-3">
+                <div class="card">
+                    <img src="https://picsum.photos/300?random=8" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Vivo X200 Pro</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">6.78-inch AMOLED LTPO display</li>
+                            <li class="list-group-item">ZEISS professional camera system</li>
+                            <li class="list-group-item">MediaTek Dimensity 9400 processor</li>
+                            <li class="list-group-item">16GB RAM with 512GB storage</li>
+                            <li class="list-group-item">6000mAh battery with 90W FlashCharge</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                        <h6 class="fw-bold">94999</h6>
+                        <button type="button" class="btn btn-primary ">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3  col-xl-2 mb-3">
+                <div class="card">
+                    <img src="https://picsum.photos/300?random=9" class="card-img-top">
+                    <div class="card-body">
+                        <h3>OPPO Find X8 Pro</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">6.78-inch AMOLED 120Hz display</li>
+                            <li class="list-group-item">Hasselblad quad camera system</li>
+                            <li class="list-group-item">MediaTek Dimensity 9400 processor</li>
+                            <li class="list-group-item">16GB RAM with 512GB storage</li>
+                            <li class="list-group-item">5910mAh battery with 80W SUPERVOOC</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                        <h6 class="fw-bold">99999</h6>
+                        <button type="button" class="btn btn-primary ">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3  col-xl-2 mb-3">
+                <div class="card">
+                    <img src="https://picsum.photos/300?random=10" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Honor Magic7 Pro</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">6.8-inch OLED LTPO display</li>
+                            <li class="list-group-item">Snapdragon 8 Elite processor</li>
+                            <li class="list-group-item">12GB RAM with 512GB storage</li>
+                            <li class="list-group-item">200MP AI telephoto camera</li>
+                            <li class="list-group-item">5850mAh battery with fast charging</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                        <h6 class="fw-bold">89999</h6>
+                        <button type="button" class="btn btn-primary ">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3  col-xl-2 mb-3">
+                <div class="card">
+                    <img src="https://picsum.photos/300?random=11" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Sony Xperia 1 VII</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">6.5-inch 4K OLED 120Hz display</li>
+                            <li class="list-group-item">Snapdragon 8 Elite chipset</li>
+                            <li class="list-group-item">12GB RAM with 256GB storage</li>
+                            <li class="list-group-item">Professional Alpha camera technology</li>
+                            <li class="list-group-item">High-resolution stereo speakers</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                        <h6 class="fw-bold">119999</h6>
+                        <button type="button" class="btn btn-primary ">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3  col-xl-2 mb-3">
+                <div class="card">
+                    <img src="https://picsum.photos/300?random=12" class="card-img-top">
+                    <div class="card-body">
+                        <h3>ASUS ROG Phone 9 Pro</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">6.78-inch AMOLED 185Hz display</li>
+                            <li class="list-group-item">Snapdragon 8 Elite gaming processor</li>
+                            <li class="list-group-item">24GB RAM with 1TB storage</li>
+                            <li class="list-group-item">AirTrigger gaming controls</li>
+                            <li class="list-group-item">5800mAh battery with 65W charging</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                        <h6 class="fw-bold">139999</h6>
+                        <button type="button" class="btn btn-primary ">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+      
+        </div>
+    </div>
+    <!-- bootstrap framework javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/20994dd270.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
