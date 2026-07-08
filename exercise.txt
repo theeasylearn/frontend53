@@ -18,3 +18,13 @@
             1 Destination on extra small screen
 
     display 24 such Destinations.
+
+forms 
+1) create vertical for registration 
+    input are 
+        fullname, email, mobile, password, confirm password
+
+2) create horizontal form to search bus route 
+    input 
+        source, destination, seat, journey date 
+
