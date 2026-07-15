@@ -1,0 +1,14 @@
+Header
+    Logo
+    SiteName
+    Menu
+Slider 
+Features
+About us 
+Menu 
+Testimonials
+Food Gallery 
+Contact us
+    Address
+    Google map 
+Footer 
