@@ -8,6 +8,14 @@
     <!-- css cdn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        @media (min-width: 1025px) {
+            #navbarSupportedContent {
+                display: flex;
+                justify-content: end;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -26,9 +34,76 @@ Contact us
     Google map 
 Footer  -->
     <!-- header -->
-    
+    <nav class="navbar navbar-expand-lg bg-danger border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-3 text-uppercase" href="#">
+                <img src="images/logo.png" alt="">
+                Shree hari restaurant </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Food Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact us</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
     <!-- Slider -->
-    
+    <div id="carouselWithIndicators" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-bs-target="#carouselWithIndicators" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#carouselWithIndicators" data-bs-slide-to="1"></li>
+            <li data-bs-target="#carouselWithIndicators" data-bs-slide-to="2"></li>
+            <li data-bs-target="#carouselWithIndicators" data-bs-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/slider_1.jpg" class="d-block w-100" alt="Slide 1">
+            </div>
+            <div class="carousel-item ">
+                <img src="images/slider_2.jpg" class="d-block w-100" alt="Slide 1">
+            </div>
+            <div class="carousel-item ">
+                <img src="images/slider_3.jpg" class="d-block w-100" alt="Slide 1">
+            </div>
+            <div class="carousel-item ">
+                <img src="images/slider_4.jpeg" class="d-block w-100" alt="Slide 1">
+            </div>
+            
+        </div>
+        <a class="carousel-control-prev" href="#carouselWithIndicators" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselWithIndicators" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </a>
+    </div>
 
     <!-- Features -->
     <div class="container-fluid">
