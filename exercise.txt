@@ -1,0 +1,9 @@
+1) create webpage using javascript. 
+    accept how many items list has from user 
+    create list using ol and li. no of li tags equals to no of items given by user. each li tag should display good morning message 
+
+2) create webpage using javascript. 
+    accept how many news should be displayed from user. 
+    create table which will have 2 columns. 1st column display heading of news and content 
+    2nd column will display news photo. 
+    for detail refers https://timesofindia.indiatimes.com/ 

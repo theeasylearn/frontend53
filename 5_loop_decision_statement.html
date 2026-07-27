@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Loop & Decision making statement</h1>
+    <hr>
+    <script>
+        // accept rows and columns from user 
+        var rows = prompt("Enter rows", 1);
+        var columns = prompt("Enter columns", 1);
+        //convert rows and columns into integer 
+        rows = parseInt(rows); //5
+        columns = parseInt(columns);
+        var column_output = '';
+        //generate columns as per no of columns given by users 
+        do {
+            column_output = column_output + `<td>${columns}</td>`;
+            columns = columns - 1;
+        } while (columns >= 1);
+
+        var row_output = '';
+        // use loop 
+        while (rows >= 1) {
+            row_output = row_output + ` <tr>
+            ${column_output}
+        </tr>`;
+            rows = rows - 1;
+        }
+        var output = `<table border="1" align="center" width="80%">
+        ${row_output}
+    </table>`;
+        document.write(output);
+    </script>
+
+</body>
+
+</html>
