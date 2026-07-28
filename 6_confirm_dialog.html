@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>confirm dialogbox</h1>
+    <p align="right">
+        <a href="home.html" onclick="return confirmLogout();">Logout</a>
+    </p>
+    <script>
+        //create user defined function 
+        function confirmLogout() {
+            var response = confirm("are you sure you want to logout?");
+            if (response == true) {
+                alert("good bye, please visit again");
+                return true; 
+            }
+            else 
+            {
+                alert("stay here and enjoy your time");
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
