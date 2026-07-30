@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Innerhtml property</h1>
+    <hr />
+    <table border="1" align="center" width="80%">
+        <tr>
+            <td width="45%">
+                <button type="button" onclick="display_one();">Load Shiv Panchakshar mantra</button>
+            </td>
+            <td width="45%">
+                <button type="button" onclick="display_two();">Load gaytri mantra</button>
+            </td>
+            <td>
+                <button type="button" onclick="clear_all();">Clear all</button>
+            </td>
+        </tr>
+        <tr>
+            <td id="shiv"></td>
+            <td id="gaytri"></td>
+            <td></td>
+        </tr>
+    </table>
+    <script>
+        //create user defined function
+        function display_one() {
+            document.getElementById("shiv").innerHTML = "ॐ नमः शिवाय ";
+        }
+        function display_two() {
+            document.getElementById("gaytri").innerHTML = "ॐ भूर्भुवः स्वः, तत्सवितुर्वरेण्यं, भर्गो देवस्य धीमहि, धियो यो नः प्रचोदयात्।";
+        }
+        function clear_all() {
+             document.getElementById("shiv").innerHTML = "";
+             document.getElementById("gaytri").innerHTML = "";
+        }
+        
+    </script>
+</body>
+
+</html>

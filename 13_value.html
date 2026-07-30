@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>value & InnerHTML property</h1>
+    <hr />
+    <table border="1" align="center" cellpadding="5">
+        <tr>
+            <td>Enter 1st number</td>
+            <td>
+                <input type="number" name="num1" id="num1" required />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Enter 2nd number
+            </td>
+            <td>
+                <input type="number" name="num2" id="num2" required />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Select operation
+            </td>
+            <td>
+                <label for="add">
+                    <input type="radio" name="operation" id="add" value="1" /> Addition
+                </label>
+                <label for="sub">
+                    <input type="radio" name="operation" id="sub" value="2" /> Subtraction
+                </label>
+                <label for="mul">
+                    <input type="radio" name="operation" id="mul" value="3" /> Multiplication
+                </label>
+                <label for="div">
+                    <input type="radio" name="operation" id="div" value="4" /> Division
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="calculate result" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center" id="output">result will be displayed here</td>
+        </tr>
+    </table>
+    <script>
+        //create user defined function
+        function display_one() {
+            document.getElementById("shiv").innerHTML = "ॐ नमः शिवाय ";
+        }
+        function display_two() {
+            document.getElementById("gaytri").innerHTML = "ॐ भूर्भुवः स्वः, तत्सवितुर्वरेण्यं, भर्गो देवस्य धीमहि, धियो यो नः प्रचोदयात्।";
+        }
+        function clear_all() {
+            document.getElementById("shiv").innerHTML = "";
+            document.getElementById("gaytri").innerHTML = "";
+        }
+
+    </script>
+</body>
+
+</html>
