@@ -7,3 +7,14 @@
     create table which will have 2 columns. 1st column display heading of news and content 
     2nd column will display news photo. 
     for detail refers https://timesofindia.indiatimes.com/ 
+
+3) create webpage that accept 3 input from user 
+    amount, rate, year 
+    calculate and display simple interest when user click on submit button. 
+
+4) create webpage that accept 4 input from user 
+    length, width, depth and it has radio button to select choice 
+    (choice will be area and volume)
+    findout area or volume based upon user choice when user clicks on submit button. 
+
+
