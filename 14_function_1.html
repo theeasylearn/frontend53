@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>GST calculator</h1>
+    <hr />
+    <form action="">
+        <table border="1" align="center" cellpadding="10" width="50%">
+            <tr>
+                <td>
+                    <input type="number" name="amount" id="amount" placeholder="Amount" required
+                        oninput="calculateGST();" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="rate" id="rate" required oninput="calculateGST();">
+                        <option value="">Select Rate</option>
+                        <option value="5">5%</option>
+                        <option value="18">18%</option>
+                        <option value="40">40%</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Tax <br>
+                    <label for="inclusive">
+                        <input type="radio" name="type" id="inclusive" value="1" /> Inclusive
+                    </label>
+                    <br>
+                    <label for="exclusive">
+                        <input type="radio" name="type" id="exclusive" value="2" />
+                        Exclusive
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td id="output">
+                    result will be displayed here
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        // 2nd method to create function
+        // let variable-name = function ()
+        // {
+        //     //body
+        // }
+        let calculateGST = function () {
+            //alert("calculate GST");
+            //get amount
+            let amount = document.getElementById('amount').value;
+            let rate = document.getElementById("rate").value;
+            console.log(amount, rate);
+            if (amount === '' || rate === '') {
+                document.getElementById('output').innerHTML = 'amount and rate can not be blank';
+            }
+            else 
+            {
+                //convert amount and rate into float value
+                amount = parseFloat(amount);
+                rate = parseInt(rate);
+                // calculate gst 
+                gst = (amount * rate) / 100;
+                total = amount + gst;
+                var temp = "Amount = " + amount + " GST = " + gst + " total amount = " + total;
+                document.getElementById('output').innerHTML = temp;
+            }
+        }
+    </script>
+</body>
+
+</html>
