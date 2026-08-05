@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error {
+            background-color: pink;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>arrow functions</h1>
+    <form action="">
+        <table border="1" cellpadding="10" align="center">
+            <tr>
+                <td>
+                    <input type="number" placeholder="enter positive number" required id="num1" name="num1" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="calculate_square()" type="button" id="square">Calculate Square</button>
+                    <button onclick="calculate_qube();" type="button" id="cubue">Calculate Cube</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="div1"></div>
+                    <div id="div2"></div>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        //arrow function 
+        let getSquare = (number) => number * number;
+        let getCube = number => number * number * number;
+        //global variable
+        var num1 = document.getElementById('num1');
+
+        let checkInput = () => {
+            if (num1.value === '') {
+                alert('number can not be blank');
+                num1.focus();
+                num1.className = "error";
+                return //function stop 
+            }
+        }
+        //2nd method
+        let calculate_square = function () {
+            //alert('square');
+            checkInput();
+            num1.className = "";
+            document.getElementById('div1').innerHTML = "square = " + getSquare(num1.value);
+        }
+
+        let calculate_qube = function () {
+            //alert('qube');
+            checkInput();
+            num1.className = "";
+            document.getElementById('div2').innerHTML = "Cube = " + getCube(num1.value);
+        }
+    </script>
+</body>
+
+</html>
