@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 75px;
+            width: 75px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tic Tac</h1>
+    <table border="1" align="center" cellpadding="10">
+        <tr>
+            <td>
+                <button type="button" id="one" class="box">-</button>
+            </td>
+            <td>
+                <button type="button" id="two" class="box">-</button>
+            </td>
+            <td>
+                <button type="button" id="three" class="box">-</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" id="four" class="box">-</button>
+            </td>
+            <td>
+                <button type="button" id="five" class="box">-</button>
+            </td>
+            <td>
+                <button type="button" id="six" class="box">-</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" id="seven" class="box">-</button>
+            </td>
+            <td>
+                <button type="button" id="eight" class="box">-</button>
+            </td>
+            <td>
+                <button type="button" id="nine" class="box">-</button>
+            </td>
+        </tr>
+    </table>
+    <script>
+        // document.getElementById('one').onclick = function () {
+        //     this.innerHTML = 'X';
+        // }
+        var buttons = document.getElementsByTagName("button"); //return array/list/HTMlCollection
+        console.log(buttons);
+        var label = 'X';
+        for (var index = 0; index < 9; index++) {
+            buttons[index].onclick = function () {
+               this.innerHTML = label;
+               if(label === 'X')
+                    label = '0';
+               else 
+                    label = 'X'; 
+               this.onclick = null; 
+            }
+        }
+
+    </script>
+</body>
+
+</html>
