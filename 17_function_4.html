@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active-box
+        {
+            background-color: yellow;
+            padding:5px;
+            border: 2px solid black;
+        }
+        .success 
+        {
+            background-color: azure;
+            border: 2px solid green;
+            padding:5px;
+        }
+        .error 
+        {
+            background-color:bisque;
+            border: 2px solid red;
+            padding:5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>2nd method of handling event</h1>
+    <table border="1" align="center" cellpadding="10">
+        <tr>
+            <td>
+                <input class="input-box" type="text" name="name" id="name" placeholder="Enter your name" required/ >
+            </td>
+            <td width="100px" id="name-td"></td>
+        </tr>
+        <tr>
+            <td>
+                <input class="input-box" type="email" name="email" id="email" placeholder="Email address" required />
+            </td>
+            <td width="100px" id="email-td"></td>
+        </tr>
+        <tr>
+            <td>
+                <input class="input-box" type="tel" name="mobile" id="mobile" placeholder="Moble no" required />
+            </td>
+            <td width="100px" id="mobile-td"></td>
+        </tr>
+    </table>
+    <script>
+        var inputList = document.getElementsByClassName("input-box"); //return HTMLCollection(array/list)
+        console.log(inputList);
+        for(var index=0;index<inputList.length;index++){
+              inputList[index].onfocus = function(){
+                    this.classList.remove("error","success");
+                    this.classList.add("active-box");
+              }
+              inputList[index].onblur = function(){
+                    this.classList.remove("active-box");
+                    if(this.value === "")
+                    {
+                        this.classList.add("error");
+                    }
+                    else 
+                    {
+                        this.classList.add("success");
+                    }
+              }
+              inputList[index].oninput = function(){
+                var length = this.value.length;
+                var td = this.id + "-td";
+                document.getElementById(td).innerHTML = length;
+              } 
+        }
+    </script>
+</body>
+
+</html>
