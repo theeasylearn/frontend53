@@ -18,3 +18,5 @@
     findout area or volume based upon user choice when user clicks on submit button. 
 
 
+5) create object User using 1st technique. store name,surname,age,gender,weight,email,mobile into it in property variable. display each and every property inside separate td tag of tr tag. 
+

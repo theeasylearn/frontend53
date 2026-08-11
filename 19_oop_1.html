@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Creating Object in javascript</h1>
+    <p>Addition = <span id="span_1"></span></p>
+    <hr/>
+    <script>
+        //create object 
+        var MyMath = {
+            //create property variable 
+            num1 : 0,
+            num2 : 0,
+            getInput : function(){
+                this.num1 = parseInt(prompt("enter first number ",0));
+                this.num2 = parseInt(prompt("enter second number",0));
+            },
+            getAddition :function(){
+                //local variable 
+                let result = this.num1 + this.num2;
+                return result;
+            },
+            // getSubtraction, getMultiplication, getDivision
+        };
+        MyMath.getInput(); //calling getInput function of MyMath Object
+        var result = MyMath.getAddition();
+        document.getElementById('span_1').innerHTML = result;
+    </script>
+</body>
+</html>
