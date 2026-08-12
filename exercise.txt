@@ -20,3 +20,13 @@
 
 5) create object User using 1st technique. store name,surname,age,gender,weight,email,mobile into it in property variable. display each and every property inside separate td tag of tr tag. 
 
+6) create object to calculate BMI which has property variables. 
+    1) weight 
+    2) foot & remaining inch 
+
+    it also has methods 
+        getInput() to store input in property variables 
+        getBMI() which return bmi of person 
+
+    accept all inputs from user using input tags. 
+

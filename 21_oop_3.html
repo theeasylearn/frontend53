@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>3rd technique to create object</h1>
+    <script>
+        function Product(name,price,quantity){
+            //create property variable
+            this.name = name;
+            this.price = price;
+            this.quantity = quantity;
+            this.display = function(){
+                console.log(this.name,this.price,this.quantity);
+            }
+        }
+        //create object variable
+        var p1 = new Product("IPhone",100000,5);
+        p1.display();
+    </script>
+</body>
+</html>
