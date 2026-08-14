@@ -1,25 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>3rd technique to create object</h1>
+    <form action="" onsubmit="return AddProduct();">
+        <table border="1" cellpadding="10" align="center" width="90%">
+            <thead>
+
+                <tr>
+                    <th>Sr No</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Delete</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="text" name="product_name" id="product_name" required />
+                    </td>
+                    <td>
+                        <input type="number" name="price" id="price" required />
+                    </td>
+                    <td>
+                        <input type="number" name="quantity" id="quantity" required />
+                    </td>
+                    <td>
+                        <input type="submit" name="submit" id="submit" value="Add product" />
+                    </td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody id="sales">
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5"><b>Total</b></td>
+                    <td id="grandtotal"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
     <script>
-        function Product(name,price,quantity){
+        //variable that store reference of sales
+        var sales = document.getElementById('sales');
+        //variable that store reference of name, price, quantity
+        var product_name = document.getElementById('product_name');
+        var price = document.getElementById('price');
+        var quantity = document.getElementById('quantity');
+
+        var grandtotal = document.getElementById('grandtotal');
+        var total=0;
+        var count = 1;
+        function Product(name, price, quantity) {
             //create property variable
             this.name = name;
             this.price = price;
             this.quantity = quantity;
-            this.display = function(){
-                console.log(this.name,this.price,this.quantity);
+            this.display = function () {
+                console.log(this.name, this.price, this.quantity);
+                sales.innerHTML += `<tr><td>${count}</td><td>${this.name}</td><td>${this.price}</td><td>${this.quantity}</td><td>${this.price * this.quantity}</td>
+                    <td><a href='#' onclick='deleteProduct(this);'>Delete</a></td></tr>`;
+                count = count + 1;
+                total = total + (parseInt(this.price) * parseInt(this.quantity));
+                grandtotal.innerHTML = total;
+            }
+
+            deleteProduct = function(tag){
+                console.log(tag);
+                var temp = tag.parentNode.parentNode.querySelector('td:nth-child(5)').innerHTML;
+                total = total - parseInt(temp);
+                grandtotal.innerHTML = total;
+                tag.parentNode.parentNode.remove();
+                alert("product has been deleted");
             }
         }
-        //create object variable
-        var p1 = new Product("IPhone",100000,5);
-        p1.display();
+
+        function AddProduct() {
+            
+            var nameValue = product_name.value;
+            var priceValue = price.value;
+            var quantityValue = quantity.value;
+            console.log(nameValue);
+            var p1 = new Product(nameValue,priceValue,quantityValue);
+            p1.display();
+            product_name.value = "";
+            price.value = "";
+            quantity.value = "";
+           
+            return false; //required 
+        }
+
     </script>
 </body>
+
 </html>
