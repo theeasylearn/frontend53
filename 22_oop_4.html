@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap framework css CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h1>Create object using 4th technique</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2 bg-light vh-100">
+                <div class="card shadow">
+                    <div class="card-header">
+                        <h2>Products</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="" onsubmit="return addProduct();">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Product Name</label>
+                                <input id="name" type="text" class="form-control" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="price" class="form-label">Price</label>
+                                <input id="price" type="number" class="form-control" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="quantity" class="form-label">Quantity</label>
+                                <input id="quantity" type="number" class="form-control" required />
+                            </div>
+                            <button type="submit" class="btn btn-danger w-100">Add Product</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10">
+                <div class="row" id="shop">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var shop = document.getElementById("shop");
+        
+        //create class 
+        class Product {
+            //create constructor (it is called automatically)
+            constructor(name, price, quantity) {
+                //property variable, we can access this property variable from any function of product class 
+                this.name = name;
+                this.price = price;
+                this.quantity = quantity;
+                //this means whole object
+                console.log("constructor called ...", this);
+            }
+            addRow() {
+                console.log(this.name, this.price, this.quantity);
+                var card = `<div class="col-lg-3">
+                <div class="card shadow">
+                    <div class="card-header text-bg-primary">
+                        <h2>${this.name}</h2>
+                    </div>
+                    <div class="card-body">
+                        <p><b>Price</b> : ${this.price}</p>
+                        <p><b>Quantity</b> :${this.quantity}</p>
+                        <p><b>Total</b> : ${this.price * this.quantity}</p>
+                    </div>
+                    <div class="card-footer">
+                        <button type="button" class="btn btn-danger w-100">Delete</button>
+                    </div>
+                </div>
+            </div>`;
+                shop.innerHTML += card;
+            }
+        }
+
+        function addProduct() {
+            //create object
+            // var object = new class()
+            var p1 = new Product("soap", 50, 10); //this will run constructor automatically
+            p1.addRow();
+
+            
+            return false;
+        }
+
+    </script>
+    <!-- bootstrap framework javascript cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/20994dd270.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
