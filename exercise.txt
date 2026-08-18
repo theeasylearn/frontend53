@@ -30,3 +30,11 @@
 
     accept all inputs from user using input tags. 
 
+7) create class using 4th technique to store player score. store 
+    Name, runs, ball, 4s,6s,2s,1s and zero and how he/she got out. 
+    accept input for all above property from users. and create object of player class pass it into constructor and display it in table format. 
+
+8) create object using 3rd technique to store customers order detail in restaurant. store 
+    customer name, no of thali, ras, papad, chas, roti. 
+    accept input for all above property from users. and create object variable when user click on submit button. and display it in card format using bootstrap. 
+
