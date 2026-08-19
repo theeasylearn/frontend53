@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>single level inheritance</h1>
+    <hr>
+    <script>
+        // parent class 
+        class Person {
+            constructor(name) {
+                this.name = name;
+                console.log("Person constructor executed.");
+            }
+            walk() {
+                console.log(`${this.name} can walk`);
+            }
+            talk() {
+                console.log(`${this.name} can talk`);
+            }
+            eat() {
+                console.log(`${this.name} can eat`);
+            }
+        }
+        class Student extends Person {
+            constructor(name, language) {
+                //calling parent class constructor (compulsory)
+                super(name);
+                this.language = language;
+                console.log("Student constructor executed.");
+            }
+            read() {
+                console.log(`${this.name} can read ${this.language}`);
+            }
+            write() {
+                console.log(`${this.name} can write ${this.language}`)
+            }
+            whatICanDo() {
+                //call parent class method 
+                super.walk();
+                super.talk();
+                super.eat();
+                //call same class method 
+                this.read();
+                this.write();
+            }
+        }
+
+        //create object of child class
+        let s1 = new Student("Jiya", "Hindi"); //it will call constructor automatically
+        s1.whatICanDo();
+        s1.walk(); //calling parent class function using child class object
+        s1.read(); //calling child class function using child class object
+    </script>
+</body>
+
+</html>
