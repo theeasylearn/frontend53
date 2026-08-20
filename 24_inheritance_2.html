@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>multi-level inheritance</h1>
+    <hr />
+    <p><b>use console for output</b></p>
+    <script>
+        class KB
+        {
+            constructor(bytes)
+            {
+                this.bytes = bytes;
+                console.log("KB class constructor called...");
+            }
+            getKB()
+            {
+                //LOCAL VARIABLE
+                let kilobytes = this.bytes / 1024;
+                return kilobytes;
+            }
+        }
+        //DERIVED CLASS
+        class MB extends KB 
+        {
+            //compulsory because parent has constructor
+            constructor(bytes)
+            {
+               super(bytes); //required
+               console.log('MB class constructor called');
+            }
+            getMB()
+            {
+                //local variable
+                let megabytes = super.getKB() / 1024;
+                return megabytes;
+            }
+        }
+
+        class GB extends MB 
+        {
+            constructor(bytes)
+            {
+                super(bytes); //required
+                console.log("GB class constructor called..");
+            }
+            getGB()
+            {
+                let gigabytes = super.getMB() / 1024;
+                return gigabytes;
+            }
+        }
+
+        let bytes = parseInt(prompt("enter bytes"));
+        //create object 
+        g1 = new GB(bytes); //automatically call constructor 
+        console.log("giga bytes = " + g1.getGB());
+        console.log("mega bytes = " + g1.getMB());
+        console.log("kilo bytes = " + g1.getKB());
+        //CREATE TB CLASS which has method getTB and extends GB class
+    </script>
+</body>
+</html>
