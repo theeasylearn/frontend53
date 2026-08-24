@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>HyBrid level inheritance</h1>
+    <hr>
+    <script>
+        class MyMath
+        {
+            getPi()
+            {
+                let pi = 22/7;
+                return pi;
+            }
+            getSquare(number)
+            {
+                let square = number * number;
+                return square;
+            }
+        }
+        //create two child class 
+        class Circle extends MyMath
+        {
+            constructor(radius)
+            {
+                super();
+                this.radius = radius;
+            }
+            getArea()
+            {
+                let area = super.getPi() * super.getSquare(this.radius);
+                return area;
+            }
+
+        }
+        class Square extends MyMath
+        {
+            constructor(size)
+            {
+                super();
+                this.size = size;
+            }
+            getArea()
+            {
+                let area = super.getSquare(this.size);
+                return area;
+            }
+        }
+
+        class Sphere extends Circle
+        {
+            constructor(radius)
+            {
+                super(radius); //calling parent class constructor 
+            }
+
+            // method Overidding
+            getArea()
+            {
+                let area = 4 * super.getArea();
+                return area;
+            }
+        }
+        var radius = parseInt(prompt("Enter radius"))
+        //create object
+        var c1 = new Circle(radius);
+
+        var size = parseInt(prompt("Enter size"))
+        var s1 = new Square(size);
+        var s2 = new Sphere(radius);
+
+        console.log("Circle area " + c1.getArea());
+        console.log("Square area" + s1.getArea());
+        console.log("Sphere area " + s2.getArea()); 
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>working with empty object</h1>
+    <hr>
+    <b>use console</b>
+    <script>
+        //create empty object
+        var book = {};
+        console.log(book);
+        //add properties
+        book.name = "Javascript";
+        book.price = 500;
+        book.author = "Ankit Patel";
+        console.log(book);
+        book['pages'] = 250;
+        book['publisher'] = "Bharat read";
+        console.log(book);
+
+        //update properties 
+        book.name = "Javascript Interview questions";
+        book['price'] = 511;
+        console.log(book);
+    </script>
+</body>
+</html>
