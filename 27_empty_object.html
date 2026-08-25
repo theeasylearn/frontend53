@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>working with empty object</h1>
     <hr>
@@ -26,6 +28,30 @@
         book.name = "Javascript Interview questions";
         book['price'] = 511;
         console.log(book);
+
+        //check if specific property do exists in object or not 
+        if (book.name === undefined) {
+            console.log("name property does not exists");
+        }
+        else {
+            console.log("name property do exists");
+        }
+        if (book.co_author === undefined) {
+            console.log("co-author property does not exists");
+        }
+        else 
+        {
+            console.log("co author property do exists");
+        }
+        if ("price" in book)
+        {
+            console.log("price proerty do exists");
+        }
+        else 
+        {
+            console.log("price property does not exists");
+        }
     </script>
 </body>
+
 </html>

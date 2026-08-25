@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>working functional bindings</h1>
+    <hr>
+    <p id="output">
+
+    </p>
+    <script>
+        //create object
+        var today = new Date();
+        var now = {
+            //store date time 
+            day: today.getDate(), 
+            month:today.getMonth(),
+            year:today.getFullYear(),
+            hour:today.getHours(),
+            minutes:today.getMinutes(),
+            second:today.getSeconds(),
+            display:function()
+            {
+                document.getElementById('output').innerHTML = this.day + "/" + this.month + "/" + this.year + " " + this.hour + ":" + this.minutes + ":" + this.second;
+            }
+        };
+        now.display();
+        //wrong way
+        // var datetime = now.display;
+        var showDateTime = now.display.bind(now);
+        showDateTime(); 
+    </script>
+</body>
+
+</html>
