@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Array/List in javascript</h1>
+    <hr>
+    <script>
+        //create list 
+        var fruits = ['apple', 'banana', 'mango','banana'];
+        console.log(fruits);
+        var vegetables = ['potato', 'tomato', 'bingen']
+        console.log(vegetables);
+
+        //merge them 
+        fridge = fruits.concat(vegetables);
+        console.log(fridge);
+
+        fruit_basket = fridge.slice(0,3); //slice and copy list into new list
+        console.log(fruit_basket);
+
+        //remove 3 item from beginning 
+        fridge.splice(0,3);
+        console.log("now fridge list has ",fridge);
+
+        var position = fruits.indexOf("banana"); // 1 return position of first value
+        var position_2 = fruits.indexOf("kiwi"); // -1 because no kiwi in fruits
+        console.log("banana position ",position);
+        console.log("kiwi position ",position_2);
+        console.log("has this fruits list contains banana ",fruits.includes("banana"));
+        console.log("has this fruits list contains kiwi ",fruits.includes("kiwi"));
+
+        //create list/array which has only numbers
+        var list = [10,20,30,40,50,60,70,80,90,100];
+        var number = 50;
+        var nextNumber = list.find(value => value > number); //60
+        console.log("1st value > 50 ",nextNumber);
+
+        var index = list.findIndex(value => value > number);
+        console.log("1st value's index > 50 ",index);
+
+        var list_2 = [200,100,300,250,500,400,1000,700];
+        console.log(list_2);
+        list_2.sort((a, b) => a - b); //sort array/list into ascending order
+        console.log(list_2);
+        //list reverse
+        list_2.reverse();
+        console.log(list_2);
+    </script>
+</body>
+
+</html>
