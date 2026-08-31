@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>example of for each loop</h1>
+    <hr />
+    <b>use console for output</b>
+    <script>
+        //create object 
+        const student = {
+            name: "Rahul Patel",
+            age: 21,
+            gender: "Male",
+            city: "Ahmedabad",
+            state: "Gujarat",
+            course: "Data Science",
+            marks: 85,
+            grade: "A",
+            email: "rahul@example.com",
+            isPassed: true
+        };
+
+        console.log(student);
+        for(let key in student)
+        {
+            //display key and value in console
+            console.log(key,student[key]);
+        }
+    </script>
+</body>
+
+</html>

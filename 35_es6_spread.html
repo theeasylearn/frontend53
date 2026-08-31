@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>ES6 spread operator</h1>
+    <hr />
+    <script>
+        var currentCar = {
+            make: 'Maruti',
+            seat: 4,
+            engine: 'petrol',
+            color: 'white',
+            transmission: 'manual'
+        };
+        var newCar = {
+            make: 'Audi',
+            seat: 6,
+            engine: 'EV',
+            color: 'black',
+            price: 5500000
+        };
+        console.log(currentCar, newCar);
+        var myCar = {...currentCar,...newCar};
+        console.log(myCar);
+    </script>
+</body>
+
+</html>

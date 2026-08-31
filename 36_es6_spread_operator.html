@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>ES6 Spread operator with list and object</h1>
+    <script>
+        let result = [];
+        console.log(result);
+        let student1 = { name: 'ram', html: 60, css: 70, javascript: 80 };
+        let student2 = { name: 'shyam', html: 75, css: 65, javascript: 85 };
+        let student3 = { name: 'geeta', html: 80, css: 75, javascript: 90 };
+        console.log(result); //empty list 
+        
+        result.push(student1); //add object into list
+        // or 
+        //add object into list using ES6 spread operator 
+        result = [...result,student2];
+        result = [...result,student3];
+        
+        console.log(result); 
+    </script>
+</body>
+
+</html>

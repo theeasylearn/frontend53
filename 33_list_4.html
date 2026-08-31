@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>map function in javascript</h1>
+    <table border="1" align="center" cellpadding="10" width="70%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Capital</th>
+                <th>Currency</th>
+                <th>Population</th>
+            </tr>
+        </thead>
+        <tbody id="output"></tbody>
+    </table>
+    <script>
+        //array(list) of object
+        const countriesData = [
+            {
+                name: "Afghanistan",
+                capital: "Kabul",
+                currency: "Afghan afghani",
+                population: 43370000
+            },
+            {
+                name: "Argentina",
+                capital: "Buenos Aires",
+                currency: "Argentine peso",
+                population: 46120000
+            },
+            {
+                name: "Australia",
+                capital: "Canberra",
+                currency: "Australian dollar",
+                population: 26640000
+            },
+            {
+                name: "Brazil",
+                capital: "Brasília",
+                currency: "Brazilian real",
+                population: 216400000
+            },
+            {
+                name: "Canada",
+                capital: "Ottawa",
+                currency: "Canadian dollar",
+                population: 38930000
+            },
+            {
+                name: "China",
+                capital: "Beijing",
+                currency: "Renminbi (Yuan)",
+                population: 1409670000
+            },
+            {
+                name: "Egypt",
+                capital: "Cairo",
+                currency: "Egyptian pound",
+                population: 112710000
+            },
+            {
+                name: "France",
+                capital: "Paris",
+                currency: "Euro",
+                population: 68140000
+            },
+            {
+                name: "Germany",
+                capital: "Berlin",
+                currency: "Euro",
+                population: 84480000
+            },
+            {
+                name: "India",
+                capital: "New Delhi",
+                currency: "Indian rupee",
+                population: 1438070000
+            },
+            {
+                name: "Indonesia",
+                capital: "Jakarta",
+                currency: "Indonesian rupiah",
+                population: 277530000
+            },
+            {
+                name: "Italy",
+                capital: "Rome",
+                currency: "Euro",
+                population: 58870000
+            },
+            {
+                name: "Japan",
+                capital: "Tokyo",
+                currency: "Japanese yen",
+                population: 124520000
+            },
+            {
+                name: "Mexico",
+                capital: "Mexico City",
+                currency: "Mexican peso",
+                population: 128450000
+            },
+            {
+                name: "Nigeria",
+                capital: "Abuja",
+                currency: "Nigerian naira",
+                population: 223800000
+            },
+            {
+                name: "Russia",
+                capital: "Moscow",
+                currency: "Russian ruble",
+                population: 144440000
+            },
+            {
+                name: "Saudi Arabia",
+                capital: "Riyadh",
+                currency: "Saudi riyal",
+                population: 36940000
+            },
+            {
+                name: "South Africa",
+                capital: "Pretoria (Executive)",
+                currency: "South African rand",
+                population: 60410000
+            },
+            {
+                name: "South Korea",
+                capital: "Seoul",
+                currency: "South Korean won",
+                population: 51750000
+            },
+            {
+                name: "Spain",
+                capital: "Madrid",
+                currency: "Euro",
+                population: 48590000
+            },
+            {
+                name: "United Kingdom",
+                capital: "London",
+                currency: "British pound",
+                population: 67700000
+            },
+            {
+                name: "United States",
+                capital: "Washington, D.C.",
+                currency: "United States dollar",
+                population: 334910000
+            }
+        ];
+        var temp = "";
+        countriesData.map((item) => {
+            console.log(item);
+            //create variables from object (item) Object destructing 
+            let {name,capital,currency,population} = item;
+            temp = temp + `<tr><td>${name}</td><td>${capital}</td><td>${currency}</td><td>${population}</td></tr>`;
+        });
+        document.getElementById('output').innerHTML =  temp;
+        
+    </script>
+</body>
+
+</html>
