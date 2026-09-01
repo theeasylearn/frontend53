@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>working with cookies</h1>
+    <hr>
+    <b>use console </b>
+
+    <!-- external javascript file -->
+    <script src="cookies.js"></script>
+
+    <script>
+        // create cookies 
+        var name = "pincode";
+        var value = 364001;
+        var days = 1000; //no of days for which cookies will be stored
+        var country = "india"; //it is normal variable not cookies 
+        setCookie(name,value,days);
+
+        setCookie("city","bhavnagar");
+        setCookie("state","gujarat");
+
+        //display cookies 
+        var temp = getCookie(name); //it should return value 364001
+        console.log("value of pincode cookie",temp);
+        console.log("country",country);
+
+    </script>
+</body>
+</html>
