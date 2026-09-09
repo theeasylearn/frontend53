@@ -1,0 +1,11 @@
+1) create nodejs example that will return name of players as unordered list of given IPL team. create server and use request & response object. 
+
+2) create nodejs example that will return below detail of given country in table format. 
+    name,
+    capital
+    currency
+    GDP
+    population 
+    continent 
+    PM/President name 
+
