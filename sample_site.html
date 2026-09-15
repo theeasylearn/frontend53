@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhavnagar | The Cultural & Coastal Hub of Saurashtra</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Variables & Theme */
+        :root {
+            --primary: #1e3a5f;
+            --primary-light: #2b5282;
+            --accent: #d97706;
+            --accent-hover: #b45309;
+            --text-dark: #0f172a;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+            --bg-white: #ffffff;
+            --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', Georgia, serif;
+            letter-spacing: -0.01em;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+            transition: var(--transition);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 75px;
+        }
+
+        .brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 0.5px;
+        }
+
+        .brand span {
+            color: var(--accent);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--accent);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Section Universal Layout */
+        section {
+            padding: 6rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 4rem auto;
+        }
+
+        .section-tag {
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: 1.5px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .section-title {
+            font-size: 2.4rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .section-description {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* 1. Hero Section */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.75), rgba(30, 58, 95, 0.65)),
+                        url('https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            color: #ffffff;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .hero-title span {
+            color: #fcd34d;
+        }
+
+        .hero-text {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.9rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: #ffffff;
+            box-shadow: 0 4px 14px rgba(217, 119, 6, 0.4);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        /* 2. Heritage & History */
+        #heritage {
+            background-color: var(--bg-white);
+        }
+
+        .heritage-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .heritage-image-wrapper {
+            position: relative;
+        }
+
+        .heritage-image-wrapper img {
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+            object-fit: cover;
+            width: 100%;
+            height: 480px;
+        }
+
+        .experience-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--primary);
+            color: #ffffff;
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            text-align: center;
+        }
+
+        .experience-badge strong {
+            display: block;
+            font-size: 2rem;
+            font-family: 'Playfair Display', serif;
+            color: #fcd34d;
+        }
+
+        .heritage-info h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .heritage-info p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        /* 3. Key Attractions */
+        #attractions {
+            background-color: var(--bg-light);
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--bg-white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(226, 232, 240, 0.6);
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-img-container {
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .card-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .card:hover .card-img-container img {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            padding: 1.8rem;
+        }
+
+        .card-body h3 {
+            font-size: 1.35rem;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .card-body p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* 4. Culture & Flavours */
+        #culture {
+            background-color: var(--bg-white);
+        }
+
+        .culture-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-box {
+            padding: 2.2rem 1.8rem;
+            border-radius: 12px;
+            background: #fdfdfd;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .feature-box:hover {
+            border-color: var(--accent);
+            background: #ffffff;
+            box-shadow: var(--card-shadow);
+        }
+
+        .feature-box .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.2rem;
+            display: inline-block;
+        }
+
+        .feature-box h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--primary);
+        }
+
+        .feature-box p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* 5. Modern Trade & Connectivity */
+        #connectivity {
+            background-color: var(--bg-light);
+        }
+
+        .connect-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .connect-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .connect-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1.2rem;
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .connect-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .connect-img {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+        }
+
+        .connect-img img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: #ffffff;
+            padding: 3.5rem 0 2rem 0;
+            text-align: center;
+        }
+
+        .footer-brand {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand span {
+            color: var(--accent);
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .footer-nav a {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .footer-nav a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 900px) {
+            .heritage-grid,
+            .connect-container {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .experience-badge {
+                right: 10px;
+                bottom: 10px;
+            }
+
+            .hero-title {
+                font-size: 2.6rem;
+            }
+
+            .nav-menu {
+                display: none; /* Modern mobile nav placeholder */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#hero" class="brand">Bhavnagar<span>.</span></a>
+                <ul class="nav-menu">
+                    <li><a href="#hero" class="nav-link">Home</a></li>
+                    <li><a href="#heritage" class="nav-link">Heritage</a></li>
+                    <li><a href="#attractions" class="nav-link">Attractions</a></li>
+                    <li><a href="#culture" class="nav-link">Culture</a></li>
+                    <li><a href="#connectivity" class="nav-link">Industry</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">Gateway to the Gulf of Khambhat</span>
+                <h1 class="hero-title">Experience the Timeless Charm of <span>Bhavnagar</span></h1>
+                <p class="hero-text">From majestic royal architecture and serene coastal views to rich cultural traditions and pioneering maritime industry, discover Gujarat’s vibrant jewel.</p>
+                <a href="#heritage" class="btn btn-primary">Discover the City</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Heritage & History Section -->
+    <section id="heritage">
+        <div class="container">
+            <div class="heritage-grid">
+                <div class="heritage-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=800&q=80" alt="Palace architecture">
+                    <div class="experience-badge">
+                        <strong>1724</strong>
+                        <span>Founded Year</span>
+                    </div>
+                </div>
+                <div class="heritage-info">
+                    <span class="section-tag">Royal Foundations</span>
+                    <h2 class="section-title">A Legacy of Visionary Rulers</h2>
+                    <p>Founded in 1724 by Bhavsinhji Gohil, Bhavnagar was established as a strategic capital and a bustling maritime port. Known for its progressive administration, Bhavnagar was the very first princely state to merge with the Indian Union after independence under Maharaja Krishnakumarsinhji Gohil.</p>
+                    <p>The city's heritage is preserved in grand European-Gothic and Indo-Saracenic monuments, sprawling garden palaces, and peaceful community institutions built during its golden era.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Key Attractions Section -->
+    <section id="attractions">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Explore</span>
+                <h2 class="section-title">Iconic Landmarks</h2>
+                <p class="section-description">A curated blend of spirituality, serene coastal waters, and architectural grandeur.</p>
+            </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1600100397608-f010f443b71a?auto=format&fit=crop&w=600&q=80" alt="Takhteshwar Temple">
+                    </div>
+                    <div class="card-body">
+                        <h3>Takhteshwar Temple</h3>
+                        <p>Resting on a high hillock, this pristine white marble temple dedicated to Lord Shiva offers panoramic views of the Gulf of Khambhat and the entire city skyline.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Gaurishankar Lake Bor Talav">
+                    </div>
+                    <div class="card-body">
+                        <h3>Bor Talav (Gaurishankar Lake)</h3>
+                        <p>A tranquil freshwater reservoir surrounded by lush flora, walking tracks, and bird habitats, making it a beloved gathering point for dawn and dusk strolls.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&w=600&q=80" alt="Nilambag Palace">
+                    </div>
+                    <div class="card-body">
+                        <h3>Nilambag Palace</h3>
+                        <p>Constructed in 1859 by a German architect, this royal residence blends neoclassical and Indian architectural styles amidst manicured royal gardens.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Culture & Flavours Section -->
+    <section id="culture">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Tradition & Taste</span>
+                <h2 class="section-title">Soul of Kathiawad</h2>
+                <p class="section-description">Immerse yourself in authentic tastes and artisanal craftsmanship renowned across the nation.</p>
+            </div>
+            <div class="culture-showcase">
+                <div class="feature-box">
+                    <div class="icon">🌶️</div>
+                    <h4>Bhavnagari Gathiya</h4>
+                    <p>World-famous crispy, golden chickpea flour snacks tempered with black pepper and carom seeds, served alongside fried chillies and fresh papaya sambharo.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="icon">🪡</div>
+                    <h4>Art & Bandhani</h4>
+                    <p>Intricate Kathiawadi embroidery, vibrant tie-dye fabrics, and regional beadwork preserved by generations of traditional artisans.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="icon">🧅</div>
+                    <h4>Bhavnagari Onions</h4>
+                    <p>Celebrated agricultural produce; Bhavnagar is widely recognized as one of India's largest hubs for onion cultivation and global dehydrated onion exports.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="icon">🎭</div>
+                    <h4>Literary & Arts Hub</h4>
+                    <p>Birthplace and sanctuary for Gujarati literature and progressive schooling movements, preserving a distinct tradition of intellectual warmth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Modern Trade & Industry Section -->
+    <section id="connectivity">
+        <div class="container">
+            <div class="connect-container">
+                <div>
+                    <span class="section-tag">Commerce & Horizon</span>
+                    <h2 class="section-title">Industry, Ports & Progress</h2>
+                    <p class="section-description">Bhavnagar pairs historic grace with industrial ingenuity, acting as a crucial engine for Gujarat's coastal commerce.</p>
+                    <ul class="connect-list">
+                        <li><strong>Alang Ship Breaking Yard:</strong> The world's largest ship recycling facility, driving metal recovery and recycling innovation.</li>
+                        <li><strong>Central Salt & Marine Chemicals Research Institute (CSMCRI):</strong> A premier national laboratory pioneering marine science.</li>
+                        <li><strong>Seamless Travel:</strong> Well connected via Bhavnagar Airport, western railway networks, and the Ghogha Ro-Pax ferry terminal.</li>
+                    </ul>
+                </div>
+                <div class="connect-img">
+                    <img src="https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=800&q=80" alt="Harbor and modern logistics">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-brand">Bhavnagar<span>.</span></div>
+            <ul class="footer-nav">
+                <li><a href="#hero">Top</a></li>
+                <li><a href="#heritage">Heritage</a></li>
+                <li><a href="#attractions">Attractions</a></li>
+                <li><a href="#culture">Culture</a></li>
+                <li><a href="#connectivity">Industry</a></li>
+            </ul>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bhavnagar Tourism & Heritage Showcase. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

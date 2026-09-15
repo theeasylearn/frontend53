@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Products | Synthetix Technologies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg-light); color: var(--text-main); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+        /* Header */
+        header { position: sticky; top: 0; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); border-bottom: 1px solid #e2e8f0; z-index: 100; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; height: 75px; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+        .logo span { color: var(--accent); }
+        .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
+        .nav-links a { font-size: 0.95rem; font-weight: 500; color: var(--text-muted); transition: var(--transition); }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent); font-weight: 600; }
+        .nav-cta { background: var(--accent); color: var(--white) !important; padding: 0.55rem 1.3rem; border-radius: 8px; }
+
+        /* Banner */
+        .page-banner { padding: 4.5rem 0; background: #ffffff; border-bottom: 1px solid #e2e8f0; text-align: center; }
+        .page-banner h1 { font-size: 2.6rem; color: var(--primary); margin-bottom: 0.8rem; }
+        .page-banner p { color: var(--text-muted); max-width: 600px; margin: 0 auto; }
+
+        /* Products Grid */
+        .products-section { padding: 5rem 0; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem; }
+        .product-card { background: var(--white); border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: var(--card-shadow); display: flex; flex-direction: column; transition: var(--transition); }
+        .product-card:hover { transform: translateY(-6px); box-shadow: 0 20px 30px -10px rgba(0,0,0,0.1); }
+        .product-img { height: 220px; overflow: hidden; }
+        .product-img img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+        .product-card:hover .product-img img { transform: scale(1.05); }
+        .product-body { padding: 2rem; flex: 1; display: flex; flex-direction: column; }
+        .product-tag { font-size: 0.75rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; }
+        .product-body h3 { font-size: 1.4rem; color: var(--primary); margin-bottom: 0.8rem; }
+        .product-body p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; flex: 1; }
+        .product-features { list-style: none; margin-bottom: 1.5rem; border-top: 1px solid #f1f5f9; padding-top: 1rem; }
+        .product-features li { font-size: 0.85rem; color: var(--text-main); margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.5rem; }
+        .product-features li::before { content: "✔"; color: var(--accent); font-size: 0.8rem; }
+
+        /* Footer */
+        footer { background: var(--primary); color: #94a3b8; padding: 4rem 0 2rem; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-logo { font-size: 1.4rem; font-weight: 700; color: var(--white); margin-bottom: 1rem; }
+        .footer-col h5 { color: var(--white); font-size: 1rem; margin-bottom: 1.2rem; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 0.6rem; }
+        .footer-col a { transition: var(--transition); font-size: 0.9rem; }
+        .footer-col a:hover { color: #38bdf8; }
+        .footer-bottom { border-top: 1px solid #1e293b; padding-top: 2rem; text-align: center; font-size: 0.85rem; }
+
+        @media (max-width: 850px) {
+            .product-grid, .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">Synthetix<span>.IT</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="container">
+            <h1>Proprietary Enterprise Platforms</h1>
+            <p>Production-ready, turn-key software suites engineered for high throughput and automated infrastructure oversight.</p>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="container">
+            <div class="product-grid">
+                
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=700&q=80" alt="Server rack and networking">
+                    </div>
+                    <div class="product-body">
+                        <span class="product-tag">SaaS Platform</span>
+                        <h3>CloudEdge Observer</h3>
+                        <p>A unified observability and telemetry console providing real-time traces, metrics, and incident diagnosis across hybrid Kubernetes environments.</p>
+                        <ul class="product-features">
+                            <li>Autonomous latency bottleneck detection</li>
+                            <li>Real-time OpenTelemetry integration</li>
+                            <li>Single pane of glass for multi-cloud setups</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=700&q=80" alt="Security dashboard">
+                    </div>
+                    <div class="product-body">
+                        <span class="product-tag">Cyber Defense</span>
+                        <h3>SentinelZero Identity</h3>
+                        <p>Next-generation privileged access control featuring context-driven multifactor validation, token lifecycle automation, and threat defense.</p>
+                        <ul class="product-features">
+                            <li>FIDO2 & WebAuthn standard compliant</li>
+                            <li>Context-aware access authorization</li>
+                            <li>Automated identity auditing & reporting</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=80" alt="Analytics graphs">
+                    </div>
+                    <div class="product-body">
+                        <span class="product-tag">Data Intelligence</span>
+                        <h3>Nexus DataHub</h3>
+                        <p>An enterprise lakehouse orchestration tool that ingests, cleanses, and prepares high-frequency streaming events for modern business intelligence.</p>
+                        <ul class="product-features">
+                            <li>Zero-ETL automated schema migration</li>
+                            <li>Sub-second query performance</li>
+                            <li>Built-in governance & compliance masks</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">Synthetix<span>.IT</span></div>
+                    <p>Engineering enterprise platforms that drive real-world reliability and uptime.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="services.html">Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Solutions</h5>
+                    <ul>
+                        <li><a href="services.html">Cloud Architecture</a></li>
+                        <li><a href="products.html">SentinelZero</a></li>
+                        <li><a href="products.html">Nexus DataHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Connect</h5>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="contact.html">Support Desk</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Synthetix Technologies Inc. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

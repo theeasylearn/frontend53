@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Synthetix Technologies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg-light); color: var(--text-main); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+        /* Header */
+        header { position: sticky; top: 0; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); border-bottom: 1px solid #e2e8f0; z-index: 100; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; height: 75px; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+        .logo span { color: var(--accent); }
+        .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
+        .nav-links a { font-size: 0.95rem; font-weight: 500; color: var(--text-muted); transition: var(--transition); }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent); font-weight: 600; }
+        .nav-cta { background: var(--accent); color: var(--white) !important; padding: 0.55rem 1.3rem; border-radius: 8px; }
+
+        /* Banner */
+        .page-banner { padding: 4.5rem 0; background: #ffffff; border-bottom: 1px solid #e2e8f0; text-align: center; }
+        .page-banner h1 { font-size: 2.6rem; color: var(--primary); margin-bottom: 0.8rem; }
+        .page-banner p { color: var(--text-muted); max-width: 600px; margin: 0 auto; }
+
+        /* Contact Layout */
+        .contact-section { padding: 5rem 0; }
+        .contact-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3.5rem; }
+        
+        /* Form */
+        .contact-form-card { background: var(--white); padding: 2.5rem; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: var(--card-shadow); }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; font-size: 0.9rem; font-weight: 600; color: var(--text-main); margin-bottom: 0.5rem; }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            color: var(--text-main);
+            transition: var(--transition);
+            background: #fff;
+        }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+        }
+        .submit-btn { width: 100%; background: var(--accent); color: var(--white); padding: 0.9rem; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: var(--transition); }
+        .submit-btn:hover { background: #1d4ed8; }
+
+        /* Contact Info Cards */
+        .info-card { background: var(--white); padding: 1.8rem; border-radius: 12px; border: 1px solid #e2e8f0; margin-bottom: 1.5rem; }
+        .info-card h4 { color: var(--primary); font-size: 1.15rem; margin-bottom: 0.4rem; }
+        .info-card p { color: var(--text-muted); font-size: 0.95rem; }
+
+        /* Footer */
+        footer { background: var(--primary); color: #94a3b8; padding: 4rem 0 2rem; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-logo { font-size: 1.4rem; font-weight: 700; color: var(--white); margin-bottom: 1rem; }
+        .footer-col h5 { color: var(--white); font-size: 1rem; margin-bottom: 1.2rem; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 0.6rem; }
+        .footer-col a { transition: var(--transition); font-size: 0.9rem; }
+        .footer-col a:hover { color: #38bdf8; }
+        .footer-bottom { border-top: 1px solid #1e293b; padding-top: 2rem; text-align: center; font-size: 0.85rem; }
+
+        @media (max-width: 850px) {
+            .contact-grid, .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">Synthetix<span>.IT</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="active nav-cta">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="container">
+            <h1>Start Your Technology Consultation</h1>
+            <p>Reach out to connect with our systems engineers and evaluate how we can modernize your workflows.</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container contact-grid">
+            
+            <div class="contact-form-card">
+                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Inquiry submitted successfully.');">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Alex Morgan" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Work Email</label>
+                        <input type="email" id="email" placeholder="alex@company.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="interest">Area of Interest</label>
+                        <select id="interest">
+                            <option value="cloud">Cloud Architecture & Migration</option>
+                            <option value="security">Cybersecurity & SOC Advisory</option>
+                            <option value="engineering">Bespoke Software Engineering</option>
+                            <option value="platform">Enterprise Platforms / SaaS</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Project Scope or Inquiry</label>
+                        <textarea id="message" rows="5" placeholder="Briefly describe your objectives, timeframe, or infrastructure needs..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Consultation Request</button>
+                </form>
+            </div>
+
+            <div class="contact-details">
+                <div class="info-card">
+                    <h4>Direct Inquiries</h4>
+                    <p>solutions@synthetixtech.io</p>
+                    <p>+1 (800) 555-0198</p>
+                </div>
+                <div class="info-card">
+                    <h4>Headquarters</h4>
+                    <p>Synthetix Technologies Tower, Suite 400</p>
+                    <p>Tech Innovation District, CA 94105</p>
+                </div>
+                <div class="info-card">
+                    <h4>Support & SLA Response</h4>
+                    <p>Active support contracts receive 24/7 dedicated engineering coverage via portal ticketing.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">Synthetix<span>.IT</span></div>
+                    <p>Modern enterprise IT architectures, cloud systems, and data pipelines built for tomorrow.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="services.html">Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Solutions</h5>
+                    <ul>
+                        <li><a href="services.html">Cloud Architecture</a></li>
+                        <li><a href="services.html">Cyber Resilience</a></li>
+                        <li><a href="products.html">Nexus DataHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Connect</h5>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="contact.html">Support Desk</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Synthetix Technologies Inc. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

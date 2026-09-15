@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Synthetix Technologies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg-light); color: var(--text-main); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+        /* Header */
+        header { position: sticky; top: 0; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); border-bottom: 1px solid #e2e8f0; z-index: 100; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; height: 75px; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+        .logo span { color: var(--accent); }
+        .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
+        .nav-links a { font-size: 0.95rem; font-weight: 500; color: var(--text-muted); transition: var(--transition); }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent); font-weight: 600; }
+        .nav-cta { background: var(--accent); color: var(--white) !important; padding: 0.55rem 1.3rem; border-radius: 8px; }
+
+        /* Banner */
+        .page-banner { padding: 4.5rem 0; background: #ffffff; border-bottom: 1px solid #e2e8f0; text-align: center; }
+        .page-banner h1 { font-size: 2.6rem; color: var(--primary); margin-bottom: 0.8rem; }
+        .page-banner p { color: var(--text-muted); max-width: 600px; margin: 0 auto; }
+
+        /* Services Rows */
+        .services-section { padding: 5rem 0; }
+        .service-row { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 5rem; }
+        .service-row:nth-child(even) { direction: rtl; }
+        .service-row:nth-child(even) .service-content { direction: ltr; }
+        .service-img img { width: 100%; border-radius: 16px; box-shadow: var(--card-shadow); height: 350px; object-fit: cover; }
+        .service-content h2 { font-size: 1.8rem; color: var(--primary); margin-bottom: 1rem; }
+        .service-content p { color: var(--text-muted); margin-bottom: 1.2rem; }
+        .service-points { list-style: none; }
+        .service-points li { margin-bottom: 0.5rem; color: var(--text-main); font-weight: 500; display: flex; gap: 0.5rem; }
+        .service-points li span { color: var(--accent); font-weight: bold; }
+
+        /* Footer */
+        footer { background: var(--primary); color: #94a3b8; padding: 4rem 0 2rem; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-logo { font-size: 1.4rem; font-weight: 700; color: var(--white); margin-bottom: 1rem; }
+        .footer-col h5 { color: var(--white); font-size: 1rem; margin-bottom: 1.2rem; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 0.6rem; }
+        .footer-col a { transition: var(--transition); font-size: 0.9rem; }
+        .footer-col a:hover { color: #38bdf8; }
+        .footer-bottom { border-top: 1px solid #1e293b; padding-top: 2rem; text-align: center; font-size: 0.85rem; }
+
+        @media (max-width: 850px) {
+            .service-row { grid-template-columns: 1fr; gap: 2rem; }
+            .service-row:nth-child(even) { direction: ltr; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">Synthetix<span>.IT</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="container">
+            <h1>Specialized Technology Services</h1>
+            <p>End-to-end consulting, development, and management services built around your enterprise business goals.</p>
+        </div>
+    </section>
+
+    <section class="services-section">
+        <div class="container">
+
+            <!-- Service 1 -->
+            <div class="service-row">
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=700&q=80" alt="Cloud Infrastructure">
+                </div>
+                <div class="service-content">
+                    <h2>Cloud Migration & Architecture</h2>
+                    <p>Modernize legacy systems by moving workloads smoothly to multi-cloud and hybrid environments without workflow disruption.</p>
+                    <ul class="service-points">
+                        <li><span>✓</span> AWS, Google Cloud & Azure cloud governance</li>
+                        <li><span>✓</span> Kubernetes container orchestration</li>
+                        <li><span>✓</span> Automated Infrastructure as Code (Terraform)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-row">
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=700&q=80" alt="Software Engineering Code">
+                </div>
+                <div class="service-content">
+                    <h2>Custom Enterprise Engineering</h2>
+                    <p>Develop responsive web applications, secure internal tools, and high-throughput APIs tailored strictly to your industry requirements.</p>
+                    <ul class="service-points">
+                        <li><span>✓</span> Event-driven microservices architecture</li>
+                        <li><span>✓</span> High-scale relational & document databases</li>
+                        <li><span>✓</span> Rigorous unit, integration, and security tests</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-row">
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&w=700&q=80" alt="Cybersecurity analysis">
+                </div>
+                <div class="service-content">
+                    <h2>Managed Security & SOC Support</h2>
+                    <p>Safeguard critical data assets with 24/7 security operations center (SOC) monitoring, penetration assessments, and zero-trust deployments.</p>
+                    <ul class="service-points">
+                        <li><span>✓</span> Continuous threat hunting & incident response</li>
+                        <li><span>✓</span> SOC2, ISO27001, and HIPAA compliance readiness</li>
+                        <li><span>✓</span> Employee security posture training & audits</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">Synthetix<span>.IT</span></div>
+                    <p>End-to-end consulting, cloud migration, and bespoke system engineering services.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="services.html">Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Solutions</h5>
+                    <ul>
+                        <li><a href="services.html">Cloud Architecture</a></li>
+                        <li><a href="services.html">Cyber Resilience</a></li>
+                        <li><a href="products.html">Nexus DataHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Connect</h5>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="contact.html">Support Desk</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Synthetix Technologies Inc. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
