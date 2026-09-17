@@ -9,3 +9,10 @@
     continent 
     PM/President name 
 
+3) create a website for school using html and css (can use ai). it should have below pages 
+    Home, 
+    About School 
+    Our Courses 
+    Career Section 
+    Alumni Registration (input should stored in file )
+    Contact  (input should be stored in file )

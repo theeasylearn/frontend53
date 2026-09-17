@@ -1,0 +1,4 @@
+Name = arti sharma email = arti@gmail.com interest = platform message = want to develop AI model 
+Name = arti sharma email = arti@gmail.com interest = platform message = want to develop AI model 
+Name = arti sharma email = arti@gmail.com interest = platform message = want to develop AI model 
+Name = ram lal email = ram@gmail.com interest = cloud message = test 
