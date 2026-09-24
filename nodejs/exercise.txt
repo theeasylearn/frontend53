@@ -1,0 +1,18 @@
+1) create nodejs example that will return name of players as unordered list of given IPL team. create server and use request & response object. 
+
+2) create nodejs example that will return below detail of given country in table format. 
+    name,
+    capital
+    currency
+    GDP
+    population 
+    continent 
+    PM/President name 
+
+3) create a website for school using html and css (can use ai). it should have below pages 
+    Home, 
+    About School 
+    Our Courses 
+    Career Section 
+    Alumni Registration (input should stored in file )
+    Contact  (input should be stored in file )

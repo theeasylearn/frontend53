@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Synthetix Technologies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --card-shadow: 0 10px 30px -10px rgba(0,0,0,0.06);
+            --transition: all 0.3s ease;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg-light); color: var(--text-main); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+        /* Header */
+        header { position: sticky; top: 0; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); border-bottom: 1px solid #e2e8f0; z-index: 100; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; height: 75px; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+        .logo span { color: var(--accent); }
+        .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
+        .nav-links a { font-size: 0.95rem; font-weight: 500; color: var(--text-muted); transition: var(--transition); }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent); font-weight: 600; }
+        .nav-cta { background: var(--accent); color: var(--white) !important; padding: 0.55rem 1.3rem; border-radius: 8px; }
+
+        /* Page Banner */
+        .page-banner { padding: 4.5rem 0; background: #ffffff; border-bottom: 1px solid #e2e8f0; text-align: center; }
+        .page-banner h1 { font-size: 2.6rem; color: var(--primary); margin-bottom: 0.8rem; }
+        .page-banner p { color: var(--text-muted); max-width: 650px; margin: 0 auto; font-size: 1.05rem; }
+
+        /* Content Section */
+        .about-story { padding: 5rem 0; }
+        .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; }
+        .story-img img { width: 100%; border-radius: 14px; box-shadow: var(--card-shadow); height: 420px; object-fit: cover; }
+        .story-content h2 { font-size: 2rem; color: var(--primary); margin-bottom: 1rem; }
+        .story-content p { color: var(--text-muted); margin-bottom: 1.2rem; }
+
+        /* Values Grid */
+        .values-section { padding: 5rem 0; background: var(--white); }
+        .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+        .value-card { padding: 2rem; border-radius: 12px; background: var(--bg-light); border: 1px solid #e2e8f0; }
+        .value-card h3 { color: var(--primary); font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .value-card p { color: var(--text-muted); font-size: 0.95rem; }
+
+        /* Footer */
+        footer { background: var(--primary); color: #94a3b8; padding: 4rem 0 2rem; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-logo { font-size: 1.4rem; font-weight: 700; color: var(--white); margin-bottom: 1rem; }
+        .footer-col h5 { color: var(--white); font-size: 1rem; margin-bottom: 1.2rem; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 0.6rem; }
+        .footer-col a { transition: var(--transition); font-size: 0.9rem; }
+        .footer-col a:hover { color: #38bdf8; }
+        .footer-bottom { border-top: 1px solid #1e293b; padding-top: 2rem; text-align: center; font-size: 0.85rem; }
+
+        @media (max-width: 850px) {
+            .story-grid, .values-grid, .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">Synthetix<span>.IT</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="container">
+            <h1>Engineered for Long-Term Digital Resilience</h1>
+            <p>We are a multidisciplinary team of systems architects, data engineers, and cyber defense specialists committed to empowering modern organizations.</p>
+        </div>
+    </section>
+
+    <section class="about-story">
+        <div class="container story-grid">
+            <div class="story-content">
+                <h2>Our Mission & Vision</h2>
+                <p>At Synthetix Technologies, we believe modern IT should never be a cost-center or operational bottleneck. Our mission is to transform complex IT environments into agile, automated engines of growth.</p>
+                <p>We partner with high-growth startups and global enterprises across finance, healthcare, logistics, and retail to build robust digital infrastructure that stands up to modern scale and security demands.</p>
+            </div>
+            <div class="story-img">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Engineers collaborating">
+            </div>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <div class="container">
+            <h2 style="text-align: center; color: var(--primary);">Our Guiding Principles</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3>Absolute Transparency</h3>
+                    <p>Clear milestones, open communication, and no hidden vendor lock-ins at any stage of our implementation lifecycles.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Security By Design</h3>
+                    <p>Security isn't a post-launch add-on. Every architecture is audited and hardened against modern threat vectors from day one.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Deterministic Quality</h3>
+                    <p>We rely on automated test harnesses, benchmarked latency profiling, and peer code reviews to guarantee software stability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">Synthetix<span>.IT</span></div>
+                    <p>Engineering resilient software, zero-trust cloud platforms, and data ops infrastructure.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="services.html">Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Solutions</h5>
+                    <ul>
+                        <li><a href="services.html">Cloud Architecture</a></li>
+                        <li><a href="services.html">Cyber Resilience</a></li>
+                        <li><a href="products.html">Enterprise Analytics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Connect</h5>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="contact.html">Support Desk</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Synthetix Technologies Inc. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
