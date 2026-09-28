@@ -7,3 +7,7 @@ create a website for College using html and bootstrap (can use ai). it should ha
     Contact  (input should be stored in file )
 
 then define route for each and every pages and return web page using fs module. refer 1_routing.js file for sample code. 
+
+2) simple example of CRUD operation using list on Product (id, name,price,quantity)
+use id for update operation and delete operation. 
+
