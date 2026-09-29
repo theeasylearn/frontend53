@@ -9,5 +9,9 @@ create a website for College using html and bootstrap (can use ai). it should ha
 then define route for each and every pages and return web page using fs module. refer 1_routing.js file for sample code. 
 
 2) simple example of CRUD operation using list on Product (id, name,price,quantity)
-use id for update operation and delete operation. 
+use id for update operation and delete operation.
+
+3) add subtraction, mulitplication, division operation routes in example 4
+
+4) create express js example which return product from products array which has name, price, quantity, size, weight just like example 5. return only that products whose price is given price range 
 
