@@ -119,18 +119,21 @@ var data = [
     { "source": "Rajkot", "destination": "Baroda", "journeyType": "gujarat nagari", "departureTime": "13:50", "price": 230 },
     { "source": "Bhuj", "destination": "Surat", "journeyType": "sleeper", "departureTime": "21:10", "price": 285 }
 ];
-//localhost:5000/searchbus/bhavnagar/ahmedabad
-app.get("/searchbus{/:source}{/:destination}", (request, response) => {
-    var source = request.params.source;
-    var destination = request.params.destination;
+
+//localhost:5000/searchbus?source=rajkot&destination=surat
+app.get("/searchbus", (request, response) => {
+    var source = request.query.source;
+    var destination = request.query.destination;
+
     if (source === undefined || destination === undefined) {
         response.send("input is missing");
     }
     else {
         var availableRoutes = data.filter((item) => {
-            if (item.source.toLowerCase() === source && item.destination.toLowerCase() === destination)
-                return item;
+            return item.source.toLowerCase() === source.toLowerCase() &&
+                   item.destination.toLowerCase() === destination.toLowerCase();
         });
+
         if (availableRoutes.length === 0) {
             response.send("no bus routes available");
         }
@@ -138,7 +141,6 @@ app.get("/searchbus{/:source}{/:destination}", (request, response) => {
             response.json(availableRoutes);
         }
     }
-
 });
 //404 route
 app.use((request, response) => {
