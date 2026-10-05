@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+
 var data = [
     { "source": "Bhavnagar", "destination": "Ahmedabad", "journeyType": "express", "departureTime": "06:15", "price": 345 },
     { "source": "Ahmedabad", "destination": "Surat", "journeyType": "AC", "departureTime": "08:30", "price": 412 },
@@ -119,36 +120,56 @@ var data = [
     { "source": "Rajkot", "destination": "Baroda", "journeyType": "gujarat nagari", "departureTime": "13:50", "price": 230 },
     { "source": "Bhuj", "destination": "Surat", "journeyType": "sleeper", "departureTime": "21:10", "price": 285 }
 ];
-app.use(function(request,response,next){
-    //convert data submitted with request into capitalize 
-    
+
+const toTitleCase = (str) => {
+    //convert it into title case 
+    return str.toLowerCase().replace(/\b\w/g, char => char.toUpperCase());
+};
+
+app.use((req, res,next) => {
+    // 1. Create a fresh object to bypass the read-only restriction
+    const formattedQuery = {};
+
+    for (const key in req.query) {
+        const value = req.query[key];
+        formattedQuery[key] = toTitleCase(value);
+    }
+
+    // 2. Force Express 5 to accept the new title-cased query object
+    Object.defineProperty(req, 'query', {
+        value: formattedQuery,
+        writable: true,
+        configurable: true,
+        enumerable: true
+    });
     next();
 });
-//localhost:5000/searchbus?source=rajkot&destination=surat
-app.get("/searchbus", (request, response) => {
+// localhost:5000/searchbus?source=rajkot&destination=surat
+app.get('/searchbus', (request, response) => {
     var source = request.query.source;
     var destination = request.query.destination;
 
-    if (source === undefined || destination === undefined) {
+    // Updated validation to catch empty strings (e.g., ?source=&destination=) alongside undefined
+    if (!source || !destination) {
         response.send("input is missing");
-    }
-    else {
+    } else {
         var availableRoutes = data.filter((item) => {
-            return item.source === source &&
-                   item.destination === destination;
+            return item.source === source && item.destination === destination;
         });
 
         if (availableRoutes.length === 0) {
             response.send("no bus routes available");
-        }
-        else {
+        } else {
             response.json(availableRoutes);
         }
     }
 });
-//404 route
+
+// 404 route
 app.use((request, response) => {
     response.status(404).send("no such page found");
 });
-app.listen(5000);
-console.log("ready to accept request");
+
+app.listen(5000, () => {
+    console.log("ready to accept request on port 5000");
+});
