@@ -1,0 +1,52 @@
+How to insert a new row/record/tuple into table?
+1st method 
+--------------------------------
+syntax 
+insert into <tablename> values (value-1,value-2,value-3)
+
+Example
+--------------------------------
+insert into category values (0,'T-SHIRT','t-shirt.jpg',NULL)
+insert into category values (NULL,'JEANS','jeans.jpg',0)
+
+2nd method 
+--------------------
+insert into <tablename> (field-1,field-2) values (value-1,value-2)
+
+Example 
+insert into category (title,photo) values ('laptop','laptop.jpg')
+insert into category (title,photo) values ('mobile','mobile.jpg')
+
+how to delete row from table?
+----------------------------------------
+
+to delete all row from table 
+delete from <tablename>
+
+Example
+-----------------------
+delete from category 
+
+
+to delete specific rows (rows as per criteria)
+delete from <tablename> where <relational_expression>
+
+example 
+------------------------------
+delete category whose id is 60
+delete from category where id=60
+
+delete category whose id is in range of 60 to 70
+delete from category where id>=60 and id<=70
+
+delete category whose name is Bags or Fruits 
+delete from category where title='Bags' or title='Fruits';
+
+
+how to delete all rows and reset id to 0 
+syntax 
+truncate table <tablename>
+example 
+truncate table category 
+
+
