@@ -49,4 +49,47 @@ truncate table <tablename>
 example 
 truncate table category 
 
+how to update row?
+-----------------------------------------------------------
+update <tablename> set field-name = value, field-name-2 = value, field-name-3 = value, field-name-4 = value [where condition] 
 
+
+update product table increase all product price by 0.99 and increase all product cost price by 5%
+
+sql 
+update products set price=price + 0.99, cost_price = cost_price + (cost_price * 5) /100
+
+update product price to 100 rs, name to "Premium Notebook" brand to "navneet" of those product whose id is 1
+
+update products set price=100,name="Premium Notebook",brand="navneet" where id = 1
+
+how to fetch data from table?
+---------------------------------------------------------
+select *|column-list from tablename [where condition] [group by ] [having ] [order by ] [limit ]
+
+display all fields and all rows from category tables 
+select * from category 
+
+display id and title of all rows from category table 
+select id,title from category 
+
+display all fields of 1st five rows 
+select * from category limit 0,5
+
+display all fields of next five rows 
+select * from category limit 5,5
+
+display all fields of next 20 rows 
+select * from category limit 10,20
+
+display all fields in name wise a to z order (ascending order )
+select * from category order by title 
+
+display all fields of 1st 20 rows in name wise z to a order (descending order )
+select * from category order by title desc limit 0,20
+
+display id, price and name of 10 most expensive product 
+select id,name,price from products order by price desc limit 0,10
+
+display id, price and name of 20 most cheap product 
+select id,name,price from products order by price  limit 0,20
