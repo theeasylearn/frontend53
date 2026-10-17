@@ -93,3 +93,184 @@ select id,name,price from products order by price desc limit 0,10
 
 display id, price and name of 20 most cheap product 
 select id,name,price from products order by price  limit 0,20
+
+--------------------------------------------------------------
+how to filter data (fetch data as per conditions)
+fetch all details of customers who are from usa 
+select * from customers where country='usa'
+
+fetch all details of customers who are from usa or france or spain or Germany
+select * from customers where country = 'usa' or country='france' or country='spain' or country='Germany'
+
+or 
+select * from customers where country in ('usa','france','spain','Germany')
+
+
+fetch customerNumber,customerName,country,state of those customers who are from usa and state is ca 
+select customerNumber,customerName,country,state from customers where country='usa' and state='ca'
+
+fetch customerNumber,customerName,creditLimit of those customers whose creditLimit is between 100000 to 500000 and display them creditLimit wise 
+
+select customerNumber,customerName,creditLimit from customers where creditLimit>=100000 and creditLimit<=500000 order by creditLimit
+
+OR 
+
+select customerNumber,customerName,creditLimit from customers where creditLimit between 100000 and 500000 order by creditLimit
+
+fetch customerNumber,customerName of those customer whose name contains wheels 
+
+select customerNumber,customerName from customers where customerName like '%wheels%'
+
+fetch customerNumber,customerName of those customer whose name start with wheels 
+select customerNumber,customerName from customers where customerName like 'wheels%'
+
+fetch customerNumber,customerName of those customer whose name end with wheels 
+select customerNumber,customerName from customers where customerName like '%wheels'
+
+fetch all details of 100 customers who are from from usa , france , spain , Germany display them country wise 
+select * from customers where country not in ('usa','france','spain','Germany') order by country limit 0,100
+
+aggregate function
+-----------------------------------------------
+function that work upon numeric field of table and always return single value is called aggregate function
+
+sum()
+it always return sum of numeric fields value in table 
+example
+findout total payment amount
+select sum(amount) from payments 
+
+avg()
+it always return average value of numeric field in table
+
+example
+findout average payment amount 
+select round(avg(amount),2) as 'average_payment' from payments; 
+
+min()
+it always return minimum value of numeric field in table
+
+example
+findout least(minimum) payment amount 
+select min(amount) as minimum_payment from payments
+
+max()
+it always return maximum of value numeric field in table 
+
+example
+findout maximum payment amount 
+select max(amount) as maximum_payment from payments  
+
+count()
+it count no of values in table 
+example 
+findout how many products company has 
+
+select count(*) as 'total_products' from products;
+
+
+findout how many customer company has 
+select count(*) as no_of_customers from customers;
+
+findout total no of orders company received
+select count(*) as no_of_orders from orders;
+
+Caution
+---------------------------------
+never use normal field along with aggregate function. otherwise it will  will provide misleading/incorrect output.
+example 
+findout customerName who has made minimum payment 
+
+select customerNumber,min(amount) as minimum_payment from payments  
+
+-------------------------------------
+we can also where and other statement with aggregate function 
+
+findout total payment amount paid by customerNumber 112
+
+select sum(amount) from payments where customerNumber=112
+
+findout no of payments, and average payment amount & total payment amount paid by customerNumber 114
+
+select count(*), avg(amount), sum(amount) from payments where customerNumber=114
+
+
+handling null 
+
+findout no of payments, and average payment amount & total payment amount paid by customerNumber 113
+select count(*) as no_of_payment , ifnull(avg(amount),0) as average_amount, ifnull(sum(amount),0) as 'sum_of_payment' from payments where customerNumber=113;
+
+
+findout total payment, no of payment received in 2005
+------------------------------------------------------------------------------
+select sum(amount), count(*) from payments where paymentdate>='2005-01-01' and paymentdate<='2005-12-31'
+
+
+findout no of cancelled orders 
+-----------------------------------------------------------------------------
+select count(*) as 'cancelled_orders' from orders where status='cancelled'
+
+
+group by 
+-------------------------
+    group by clause is when we want to get sub total/group on repetative fields value.
+    group by clause should be used with aggrigate function 
+    field we use with group clause should be also displayed
+
+findout no of orders cancelled, shipped, Disputed, in process etc 
+select status,count(*) from orders group by status
+
+findout no of customers from each country, show them in descending order 
+select count(*), country from customers group by country order by count(*) desc 
+
+findout total payment amount paid by each customers 
+select customerNumber,sum(amount) from payments group by customerNumber
+
+findout total payment amount made in each year 
+select sum(amount),left(paymentdate,4) from payments group by left(paymentdate,4)
+
+findout no of orders received by each customers and display them in descending order 
+select customerNumber,count(*) from orders group by customerNumber order by count(*) desc;
+
+display top 10 customer by payments 
+select customerNumber,sum(amount) from payments group by customerNumber order by sum(amount) desc limit 0,10
+
+display top 10 customer by orders count 
+select count(*),customerNumber from orders group by customerNumber order by count(*) desc limit 0,10
+
+having 
+--------------------------------------------------------------------------------
+having clause is used to give condition on aggrigate function's group by value. 
+having caluse is always used only when select statement has aggrigate functions & group by clause. 
+
+fetch customerNumber and total payment amount of those customer who have paid more then 500000 total
+select customerNumber,sum(amount) as 'total_amount' from payments group by customerNumber having sum(amount)>50000
+
+
+fetch country and no of customers from country where customers count is above 10 and display them in descending order of count
+select country,count(*) from customers group by country having count(*)>10 order by count(*) desc
+
+fetch no of order of each customers whose no of orders less then 5
+select customerNumber,count(*) from orders group by customerNumber having count(*)<5
+--------------------------------------------------------------------------------------------
+how to fetch data from multiple tables. 
+
+when we fetch data from multiple tables then it is called join operations between tables. there are many type of join we can use between tables 
+
+Ram 
+    A,B,C,D 
+
+Shyam 
+    C,D,E,F 
+
+1) equi/Inner join 
+    when we want to fetch data from multiple tables based upon common fields between tables it is called equi join. here it fetch only matching value from both tables 
+
+2) Left join 
+   we want to fetch data from two tables, we want to fetch all rows from left side table where we want to fetch only matching rows from right side tables based upon common field 
+
+3) Right join 
+   we want to fetch data from two tables, we want to fetch all rows from right side table and we want to fetch only matching rows from left side tables based upon common field 
+
+4) full join 
+    we want to fetch all rows from two tables without giving any condition on common fields at that time we use full join. it do cartisan product operation on both tables.

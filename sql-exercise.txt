@@ -1,0 +1,256 @@
+Based on the uploaded SQL notes , here are SQL exercises arranged from beginner to intermediate level.
+
+## Part 1: Table Creation Exercises
+
+1. Create a table named `student` with the following fields:
+
+   * id (Primary Key, Auto Increment)
+   * fullname
+   * gender
+   * dob
+   * email (Unique)
+   * mobile (Unique)
+
+2. Create a table named `employee` with:
+
+   * empid (Primary Key)
+   * empname (Not Null)
+   * salary (Check salary > 10000)
+   * department
+   * joining_date
+
+3. Create a table named `product` with:
+
+   * productid (Primary Key, Auto Increment)
+   * productname (Not Null)
+   * price (Check price > 0)
+   * stock
+   * status (Default 'Available')
+
+4. Create a table named `course` with:
+
+   * courseid
+   * coursename
+   * fees
+   * duration
+
+5. Create a table named `department` and `teacher` where teacher references department using a Foreign Key.
+
+---
+
+## Part 2: Insert Command Exercises
+
+6. Insert one record into the `student` table using all fields.
+
+7. Insert 10 students into the `student` table.
+
+8. Insert a teacher record by specifying only:
+
+   * fullname
+   * gender
+   * email
+   * mobile
+
+9. Insert 5 products into the `product` table.
+
+10. Insert 3 departments and 10 employees.
+
+---
+
+## Part 3: Delete Command Exercises
+
+11. Delete the teacher whose id is 10.
+
+12. Delete all teachers whose weight is greater than 80 kg.
+
+13. Delete all female teachers.
+
+14. Delete all teachers born before 1988.
+
+15. Delete all teachers whose height is less than 5.4 feet.
+
+16. Delete all rows from the teacher table.
+
+17. Empty the teacher table using TRUNCATE.
+
+18. Remove the teacher table permanently.
+
+---
+
+## Part 4: Update Command Exercises
+
+19. Increase the height of all teachers by 1 foot.
+
+20. Increase the weight of all teachers by 5 kg.
+
+21. Change the weight of Rahul Sharma to 100 kg.
+
+22. Change the gender of teacher id 5 to female.
+
+23. Update the email address of Vikram Singh.
+
+24. Increase the height of all female teachers by 0.5 feet.
+
+25. Set the photo field to "default.jpg" for all teachers.
+
+26. Change the mobile number of teacher id 25.
+
+---
+
+## Part 5: Basic SELECT Exercises
+
+27. Display all teacher records.
+
+28. Display only fullname and email.
+
+29. Display fullname, mobile, and weight.
+
+30. Display all teachers sorted by fullname.
+
+31. Display all teachers sorted by weight.
+
+32. Display only first 10 teacher records.
+
+33. Display the first 5 teachers sorted by date of birth.
+
+---
+
+## Part 6: WHERE Clause Exercises
+
+34. Display all male teachers.
+
+35. Display all female teachers.
+
+36. Display teachers whose weight is above 80 kg.
+
+37. Display teachers whose weight is below 60 kg.
+
+38. Display teachers whose height is greater than 5.8 feet.
+
+39. Display teachers born after 1990.
+
+40. Display teachers born before 1988.
+
+41. Display teachers whose name is Rahul Sharma.
+
+42. Display teachers whose email contains "gmail.com".
+
+43. Display teachers whose weight is between 70 and 80.
+
+44. Display teachers whose height is between 5.4 and 5.8.
+
+---
+
+## Part 7: ORDER BY Exercises
+
+45. Display teachers sorted by fullname ascending.
+
+46. Display teachers sorted by fullname descending.
+
+47. Display teachers sorted by weight ascending.
+
+48. Display teachers sorted by weight descending.
+
+49. Display teachers sorted by date of birth.
+
+50. Display teachers sorted by gender and fullname.
+
+---
+
+## Part 8: Aggregate Function Exercises
+
+51. Count total teachers.
+
+52. Count total male teachers.
+
+53. Count total female teachers.
+
+54. Find maximum weight.
+
+55. Find minimum weight.
+
+56. Find average weight.
+
+57. Find total weight of all teachers.
+
+58. Find maximum height.
+
+59. Find minimum height.
+
+60. Find average height.
+
+---
+
+## Part 9: GROUP BY Exercises
+
+61. Count teachers by gender.
+
+62. Find average weight by gender.
+
+63. Find maximum weight by gender.
+
+64. Find minimum weight by gender.
+
+65. Count teachers born in each year.
+
+66. Count teachers having Gmail accounts grouped by gender.
+
+---
+
+## Part 10: HAVING Clause Exercises
+
+67. Display gender groups having more than 20 teachers.
+
+68. Display birth years having more than 3 teachers.
+
+69. Display gender groups whose average weight exceeds 70 kg.
+
+70. Display groups where total weight exceeds 1000 kg.
+
+---
+
+## Part 11: Constraint Exercises
+
+71. Try inserting a NULL value into fullname.
+
+72. Try inserting duplicate email values.
+
+73. Try inserting duplicate mobile numbers.
+
+74. Try inserting a negative weight.
+
+75. Insert a record without specifying the AUTO_INCREMENT field.
+
+76. Insert a record without specifying a DEFAULT column.
+
+77. Observe which constraints prevent insertion.
+
+---
+
+## Part 12: Challenge Exercises
+
+78. Display the top 5 heaviest teachers.
+
+79. Display the youngest teacher.
+
+80. Display the oldest teacher.
+
+81. Find the difference between maximum and minimum weight.
+
+82. Display teachers whose weight is above average weight.
+
+83. Display teachers whose height is above average height.
+
+84. Display the second heaviest teacher.
+
+85. Display teachers whose names start with 'R'.
+
+86. Display teachers whose names end with 'a'.
+
+87. Display teachers whose names contain 'sharma'.
+
+88. Display teachers whose email starts with 'a'.
+
+89. Display teachers having birthdays in July.
+
+90. Display the top 10 oldest teachers.
