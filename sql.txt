@@ -213,45 +213,47 @@ select count(*) as 'cancelled_orders' from orders where status='cancelled'
 
 group by 
 -------------------------
-    group by clause is when we want to get sub total/group on repetative fields value.
-    group by clause should be used with aggrigate function 
-    field we use with group clause should be also displayed
+    group by clause is when we want to get sub total/grouping on repetitive fields value.
+    group by clause should be used with aggregate functions only  
+    field we use with group clause should be also displayed for meaningful output
 
-findout no of orders cancelled, shipped, Disputed, in process etc 
-select status,count(*) from orders group by status
+findout no of orders cancelled, shipped, Disputed, in process etc
+select count(*),status from orders group by status;
 
 findout no of customers from each country, show them in descending order 
-select count(*), country from customers group by country order by count(*) desc 
+select count(*),country from customers group by country order by count(*) desc;
 
 findout total payment amount paid by each customers 
-select customerNumber,sum(amount) from payments group by customerNumber
+select sum(amount),customerNumber from payments group by customerNumber;
 
-findout total payment amount made in each year 
-select sum(amount),left(paymentdate,4) from payments group by left(paymentdate,4)
+findout total payment amount received in each calendar year 
+select sum(amount),year(paymentDate) from payments group by year(paymentDate);
 
-findout no of orders received by each customers and display them in descending order 
-select customerNumber,count(*) from orders group by customerNumber order by count(*) desc;
+findout no of orders received from each customers and display them in no of order wise descending order 
+select count(*),customerNumber from orders group by customerNumber order by count(*) desc 
+
 
 display top 10 customer by payments 
-select customerNumber,sum(amount) from payments group by customerNumber order by sum(amount) desc limit 0,10
+select sum(amount),customerNumber from payments group by customerNumber order by sum(amount) desc  limit 0,10
 
 display top 10 customer by orders count 
-select count(*),customerNumber from orders group by customerNumber order by count(*) desc limit 0,10
+select count(*), customerNumber from orders group by customerNumber order by count(*) desc limit 0,10;
 
 having 
 --------------------------------------------------------------------------------
-having clause is used to give condition on aggrigate function's group by value. 
-having caluse is always used only when select statement has aggrigate functions & group by clause. 
+having clause is used to give condition on aggregate function's group by value. 
+having clause is always used only when select statement has aggregate functions & group by clause. 
 
-fetch customerNumber and total payment amount of those customer who have paid more then 500000 total
-select customerNumber,sum(amount) as 'total_amount' from payments group by customerNumber having sum(amount)>50000
+fetch customerNumber and total payment amount of those customer who have paid more then 500000 total payments 
 
+select sum(amount), customerNumber from payments group by customerNumber having sum(amount)>500000
 
-fetch country and no of customers from country where customers count is above 10 and display them in descending order of count
-select country,count(*) from customers group by country having count(*)>10 order by count(*) desc
+fetch country and no of customers from each country where customers count is above 10 and display them in descending order of count
+select count(*),country from customers group by country having count(*)>10 order by count(*)
 
 fetch no of order of each customers whose no of orders less then 5
-select customerNumber,count(*) from orders group by customerNumber having count(*)<5
+select count(*),customerNumber from orders group by customerNumber having count(*)<5
+
 --------------------------------------------------------------------------------------------
 how to fetch data from multiple tables. 
 
