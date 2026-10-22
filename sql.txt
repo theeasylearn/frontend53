@@ -255,9 +255,14 @@ fetch no of order of each customers whose no of orders less then 5
 select count(*),customerNumber from orders group by customerNumber having count(*)<5
 
 --------------------------------------------------------------------------------------------
-how to fetch data from multiple tables. 
+why we should fetch data from multiple tables?
+getting data from one table may not provide all the required information. for example customers table only contain data about customers. it can give us data about orders, items in orders and payment information. in such situation we need to fetch data from multiple tables and display them all together. 
 
-when we fetch data from multiple tables then it is called join operations between tables. there are many type of join we can use between tables 
+how to fetch data from multiple tables? 
+--------------------------------------
+to fetch data from more then one table, we have to do join operation among tables. join operation can fetch data from multiple tables all together. 
+
+there are several types we can make among tables. 
 
 Ram 
     A,B,C,D 
@@ -276,3 +281,31 @@ Shyam
 
 4) full join 
     we want to fetch all rows from two tables without giving any condition on common fields at that time we use full join. it do cartisan product operation on both tables.
+
+what is common field
+    Command field is field in two tables which has same type and same domain values (range of values). they might also have same name 
+
+---------------------------------------------------------------
+1) fetch customerNumber,customerName,orderDate,orderNumber and status, display data customerName wise 
+
+    select customerNumber,customerName from customers order by customerName 
+    select orderDate,orderNumber,status from orders 
+
+    let us merge them into single sql statement 
+    select c.customerNumber,customerName,orderDate,orderNumber,status from customers c, orders o where c.customerNumber=o.customerNumber order by customerName 
+
+2) fetch customerNumber,customerName and his payment detail 
+    select customerNumber,customerName from customers
+    select * from payments 
+
+    let us merge them into single sql statement 
+    select c.customerNumber,customerName,p.* from customers c, payments p where c.customerNumber = p.customerNumber
+
+3) fetch orderNumber,orderDate, ProductCode, Quantity and price of item in order
+   select orderNumber,orderDate from orders o  
+   select ProductCode,priceEach,quantityOrdered from orderdetails od  
+
+   let us join 
+   select o.orderNumber,orderDate,ProductCode,priceEach,quantityOrdered from orders o, orderdetails od where o.orderNumber = od.orderNumber
+
+   
