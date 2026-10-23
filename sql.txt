@@ -308,4 +308,38 @@ what is common field
    let us join 
    select o.orderNumber,orderDate,ProductCode,priceEach,quantityOrdered from orders o, orderdetails od where o.orderNumber = od.orderNumber
 
-   
+   4) fetch customerNumber,customerName,country, orderNumber, orderDate, ProductCode, price,Quantity ProductName and display them customerName wise 
+
+    select customerNumber,customerName,country from customers c 
+    select orderNumber, orderDate from orders o 
+    select ProductCode,priceEach,quantityOrdered from orderdetails od 
+    select ProductName from products p 
+
+    let us join them 
+    select c.customerNumber,customerName,country,o.orderNumber, orderDate,p.ProductCode,ProductName,priceEach,quantityOrdered from customers c, orders o,  orderdetails od, products p where c.customerNumber=o.customerNumber and o.orderNumber = od.orderNumber and p.ProductCode = od.ProductCode order by customerName 
+
+fetch customerNumber,customerName and their total payment amount 
+    
+    select customerNumber,customerName from customers c 
+    select sum(amount) from payments p group by customerNumber
+
+    join 
+    select c.customerNumber,customerName,sum(amount) as 'total payment' from customers c, payments p where c.customerNumber=p.customerNumber group by c.customerNumber 
+
+
+fetch customerNumber,customerName and their total shipped orders and display them customerName wise 
+
+    select customerNumber,customerName from customers c order by customerName
+    select customerNumber,count(*) as 'order_count' from orders o where status = 'shipped' group by customerNumber
+
+    merge 
+    select c.customerNumber,customerName,count(*) as 'order_count' from customers c,  orders o where status = 'shipped' and c.customerNumber=o.customerNumber group by c.customerNumber order by customerName
+
+fetch ProductCode wise ProductCode,ProductName and total order amount  and display them order amount wise descending order 
+
+    select ProductCode,ProductName from products p 
+    select ProductCode,sum(priceEach * quantityOrdered) as 'order_value' from orderdetails od group by ProductCode order by sum(priceEach * quantityOrdered) desc 
+
+    let us merge them 
+    select p.ProductCode,ProductName,sum(priceEach * quantityOrdered) as 'order_value' from products p,orderdetails od where p.ProductCode=od.ProductCode group by ProductCode order by sum(priceEach * quantityOrdered) desc  
+
