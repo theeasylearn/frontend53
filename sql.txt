@@ -343,3 +343,56 @@ fetch ProductCode wise ProductCode,ProductName and total order amount  and displ
     let us merge them 
     select p.ProductCode,ProductName,sum(priceEach * quantityOrdered) as 'order_value' from products p,orderdetails od where p.ProductCode=od.ProductCode group by ProductCode order by sum(priceEach * quantityOrdered) desc  
 
+Left Joins 
+------------------------------------------------------
+fetch customerNumber,customerName of those customers who have never given order 
+
+select customerNumber,customerName from customers c
+select orderNumber from orders o 
+
+let us join them 
+select c.customerNumber,customerName,orderNumber from customers c left join orders o on c.customerNumber = o.customerNumber where orderNumber is null
+
+
+fetch customerNumber,customerName of those customers who have never given payments 
+
+select customerNumber,customerName from customers c
+select amount from payments p 
+
+let us join them 
+select c.customerNumber,customerName,amount from customers c left join payments p on c.customerNumber = p.customerNumber where amount is null 
+
+
+fetch productName and ProductCode of those product which has been never ordered 
+
+select ProductCode,productName from products p 
+select orderNumber from orderdetails od 
+
+join them 
+select p.ProductCode,productName,orderNumber from products p left join orderdetails od on p.ProductCode = od.ProductCode where od.ProductCode is null 
+
+
+ Right join 
+ fetch customerNumber,customerName of those customers who have never given order.
+ 
+ select customerNumber,customerName from customers c
+ select orderNumber from orders o  
+
+
+ select orderNumber,c.customerNumber,customerName  from orders o right join customers c on o.customerNumber = c.customerNumber where o.customerNumber is null 
+
+ fetch officeCode,city,state, country of those office in which no employee is working. 
+
+ select officeCode,city,state, country from offices o;
+ select employeeNumber from employees e 
+
+ select o.officeCode,city,state, country,employeeNumber from employees e right join offices o on e.officeCode = o.officeCode where e.officeCode is null;
+
+join offices table with employee table 
+
+ select officeCode,city,state, country from offices o;
+ select employeeNumber, firstName, lastName from employees e 
+
+ join 
+ --------------------------------
+ select officeCode,city,state, country,employeeNumber, firstName, lastName from offices o,employees e;
