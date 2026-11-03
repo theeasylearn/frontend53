@@ -13,8 +13,45 @@ var app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 const ROUTE = "/users";
-app.get(ROUTE, function (request, response) {
-    response.json(data);
+//check email and password is found in table or not
+//curl -X POST http://localhost:5000/users/login
+// require input : email and password
+app.post(ROUTE + "/login", function (request, response) {
+    // console.log(request.body.email);
+    // console.log(request.body.password);
+    var email = request.body.email;
+    var password = request.body.password;
+    if (email === undefined || password === undefined) {
+        response.json([{ 'error': 'input is missing' }])
+    }
+    else {
+        var sql = "select id, password from users where email = ?";
+        var values = [email];
+        connection.con.query(sql, values, function (error, result) {
+            if (error != null) {
+                response.json([{ 'error': 'opps something went wrong' }]);
+                console.log(error);
+            }
+            else {
+                // console.log(result.length);
+                if (result.length === 0) {
+                    response.json([{ 'error': 'no' }, { 'success': 'no' }, { 'message': 'invalid email address' }]);
+                }
+                else {
+                    var hashed_password = result[0]['password'];
+                    pwd.comparePassword(hashed_password, password).then((isMatched) => {
+                        if (isMatched === true) {
+                            response.json([{ 'error': 'no' }, { 'success': 'yes' }, { 'message': 'login successful' }]);
+                        }
+                        else {
+                            response.json([{ 'error': 'no' }, { 'success': 'no' }, { 'message': 'invalid password' }]);
+                        }
+                    })
+
+                }
+            }
+        });
+    }
 });
 
 //curl -X POST http://localhost:5000/users
