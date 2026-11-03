@@ -6,7 +6,7 @@
 var express = require('express')
 var bodyParser = require('body-parser');
 var connection = require("./connection.js");
-
+var pwd = require("./password.js");
 var data = []; //empty list 
 var app = express();
 //below lines are required to accept input submitted with post/put/delete method
@@ -26,19 +26,29 @@ app.post(ROUTE, function (request, response) {
         response.json([{ 'error': 'input missing' }])
     }
     else {
+        //password hash
+        pwd.hashPassword(password).then((NewHashedPassword) => {
+            var sql = "insert into users (email,mobile,password) values (?,?,?)";
+            // ? placeholder
+            values = [email, mobile, NewHashedPassword];
+            connection.con.query(sql, values, function (error, result) {
+                if (error) {
+
+                    console.log(error);
+                    if (error.errno === 1062) {
+                        response.json([{ 'error': 'no' }, { 'success': 'no' }, { 'message': 'either email or mobile is already registered. both must not be previously used.' }]);
+                    }
+                    else {
+                        response.json([{ 'error': 'oops something went wrong' }]);
+                    }
+                }
+                else {
+                    response.json([{ 'error': 'no' }, { 'success': 'yes' }, { 'message': 'registered successfully' }]);
+                }
+            });
+        })
         //run insert statement
-        var sql = "insert into users (email,mobile,password) values (?,?,?)";
-        // ? placeholder
-        values = [email, mobile, password];
-        connection.con.query(sql, values, function (error, result) {
-            if (error) {
-                response.json([{ 'error': 'oops something went wrong' }]);
-                console.log(error);
-            }
-            else {
-                response.json([{ 'error': 'no' }, { 'success': 'yes' }, { 'message': 'registered successfully' }]);
-            }
-        });
+
     }
 
 });
