@@ -41,7 +41,7 @@ app.post(ROUTE + "/login", function (request, response) {
                     var hashed_password = result[0]['password'];
                     pwd.comparePassword(hashed_password, password).then((isMatched) => {
                         if (isMatched === true) {
-                            response.json([{ 'error': 'no' }, { 'success': 'yes' }, { 'message': 'login successful' }]);
+                            response.json([{ 'error': 'no' }, { 'success': 'yes' }, { 'message': 'login successful' }, { 'id': result[0]['id'] }]);
                         }
                         else {
                             response.json([{ 'error': 'no' }, { 'success': 'no' }, { 'message': 'invalid password' }]);
@@ -90,33 +90,57 @@ app.post(ROUTE, function (request, response) {
 
 });
 
-// curl -X PUT http://localhost:5000/contact
-app.put(ROUTE, function (request, response) {
-    var email = request.body.email;
-    var mobile = request.body.mobile;
-    var name = request.body.name;
-    if (email === undefined || mobile === undefined || name === undefined) {
-        response.send('input missing');
+// curl -X PUT http://localhost:5000/users
+// used to change password of logged in users
+// input : id, current password, new password
+app.post(ROUTE + "/change-password", function (request, response) {
+    var id = request.body.id;
+    var password = request.body.password;
+    var new_password = request.body.new_password;
+    console.log(id,password,new_password);
+    if (id === undefined || password === undefined || new_password === undefined) {
+        response.send([{ 'error': 'input is missing' }]);
     }
     else {
-        var isFound = false;
-        data = data.map((item) => {
-            if (item.name === name) {
-                isFound = true;
-
-                return {
-                    email: email,
-                    mobile: mobile,
-                    name: name
-                };
+        //fetch password in database using id 
+        var sql = "select password from users where id = ?";
+        var values = [id];
+        connection.con.query(sql, values, function (error, result) {
+            if (error) {
+                response.send([{ 'error': 'oops, something went wrong' }]);
+                console.log(error);
             }
-
-            return item;
+            else {
+                if (result.length === 0) {
+                    response.send([{ 'error': 'no' }, { 'success': 'no' }, { 'message': 'invalid id' }]);
+                }
+                else {
+                    var hashed_password = result[0]['password'];
+                    //compare hashed_password and password
+                    pwd.comparePassword(hashed_password, password).then((isMatched) => {
+                        if (isMatched === false) {
+                            response.send([{ 'error': 'no' }, { 'success': 'no' }, { 'message': 'invalid password' }]);
+                        }
+                        else {
+                            //generate hash value of new password 
+                            pwd.hashPassword(new_password).then((NewHashedPassword) => {
+                                var sql = "update users set password = ? where id = ?";
+                                var values = [NewHashedPassword, id];
+                                connection.con.query(sql, values, function (error, result) {
+                                    if (error) {
+                                        response.send([{ 'error': 'oops, something went wrong' }]);
+                                        console.log(error);
+                                    }
+                                    else {
+                                        response.send([{ 'error': 'no' }, { 'success': 'yes' }, { 'message': 'password changed successfully' }]);
+                                    }
+                                })
+                            })
+                        }
+                    })
+                }
+            }
         });
-        if (isFound === true)
-            response.send("Contact has been updated successfully");
-        else
-            response.send("Contact not found");
     }
 
 });
