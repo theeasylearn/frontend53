@@ -97,7 +97,7 @@ app.post(ROUTE + "/change-password", function (request, response) {
     var id = request.body.id;
     var password = request.body.password;
     var new_password = request.body.new_password;
-    console.log(id,password,new_password);
+    console.log(id, password, new_password);
     if (id === undefined || password === undefined || new_password === undefined) {
         response.send([{ 'error': 'input is missing' }]);
     }
@@ -145,26 +145,52 @@ app.post(ROUTE + "/change-password", function (request, response) {
 
 });
 
-//curl -X DELETE http://localhost:5000/contact
-app.delete(ROUTE, function (request, response) {
-    var name = request.body.name;
-    var isFound = false;
-    if (name === undefined) {
-        response.send('input missing');
+//curl -X POST http://localhost:5000/users/forgot-password
+// required input : email 
+app.post(ROUTE + "/forgot-password", function (request, response) {
+    var email = request.body.email;
+    if (email === undefined) {
+        response.json([{ 'error': 'input is missing' }])
     }
     else {
-        data = data.filter((item) => {
-            if (item.name !== name)
-                return item;
-            else
-                isFound = true;
+        // check email exists in table or not 
+        sql = "select id from users where email = ?";
+        var values = [email];
+        connection.con.query(sql, values, function (error, result) {
+            if (error) {
+                response.json([{ 'error': 'oops something went wrong' }]);
+                console.log(error);
+            }
+            else {
+                // if email not found inform user that email not registered 
+                if (result.length == 0) {
+                    response.json([{ 'error': 'no' }, { 'success': 'no' }, { 'message': 'email not registered with us' }])
+                }
+                else {
+                    // if found then generate random password then send random password on email 
+                    let newPassword = pwd.generatePassword();
+                    console.log(newPassword);
+                    // hash password generated randomly  
+                    pwd.hashPassword(newPassword).then((hashed_password) => {
+                        console.log(hashed_password);
+                        //and store it into database   
+                        var sql = "update users set password=? where email=?";
+                        var values = [hashed_password, email];
+                        connection.con.query(sql, values, function (error, result) {
+                            if (error) {
+                                response.json([{ 'error': 'oops something went wrong' }]);
+                                console.log(error);
+                            }
+                            else {
+                                //password updated successfully
+                                response.json([{ 'error': 'no' }, { 'success': 'yes' }, { 'message': 'we have recovered your account, check email' }])
+                            }
+                        })
+                    })
+                }
+            }
         });
-        if (isFound === true)
-            response.send("Contact has been deleted successfully");
-        else
-            response.send("Contact not found");
     }
-
 });
 
 const portno = 5000;
