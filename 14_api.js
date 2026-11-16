@@ -184,6 +184,14 @@ app.post(ROUTE + "/forgot-password", function (request, response) {
                             else {
                                 //password updated successfully
                                 response.json([{ 'error': 'no' }, { 'success': 'yes' }, { 'message': 'we have recovered your account, check email' }])
+                                //send original password as email 
+                                var e = require("./MyEmail.js");
+                                
+                                //create object 
+                                var mail = new e.EMail();
+                                var subject = "password recovery email from frontend 53 (demo)";
+                                var message = "your new password is " + newPassword;
+                                mail.send(email,subject,message);
                             }
                         })
                     })
