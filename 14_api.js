@@ -29,7 +29,7 @@ app.post(ROUTE + "/login", function (request, response) {
         var values = [email];
         connection.con.query(sql, values, function (error, result) {
             if (error != null) {
-                response.json([{ 'error': 'opps something went wrong' }]);
+                response.json([{ 'error': 'oops something went wrong' }]);
                 console.log(error);
             }
             else {
