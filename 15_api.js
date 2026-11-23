@@ -69,9 +69,8 @@ app.put(ROUTE, function (request, response) {
                         response.json([{ 'error': 'oops something went wrong' }]);
                         console.log(error);
                     }
-                    else 
-                    {
-                         response.json([{ 'error': 'no' }, { 'success': 'yes' }, { 'message': 'category updated' }]);
+                    else {
+                        response.json([{ 'error': 'no' }, { 'success': 'yes' }, { 'message': 'category updated' }]);
                     }
                 });
             }
@@ -80,11 +79,27 @@ app.put(ROUTE, function (request, response) {
 });
 
 // route to delete category
+//input : id (required)
 app.delete(ROUTE, function (request, response) {
-    response.send("delete existing category");
+    var id = request.body.id;
+    if (id === undefined) {
+        response.json([{ 'error': 'input is missing' }]);
+    }
+    else {
+        var sql = "delete from category where id = ?";
+        var values = [id];
+        connection.con.query(sql, values, function (error) {
+            if (error != null) {
+                response.json([{ 'error': 'oops something went wrong' }]);
+                console.log(error);
+            }
+            else 
+            {
+                 response.json([{ 'error': 'no' }, { 'success': 'yes' }, { 'message': 'category deleted' }]);
+            }
+        });
+    }
 });
-
-
 // route to fetch category
 app.get(ROUTE, function (request, response) {
     //create sql variable 
