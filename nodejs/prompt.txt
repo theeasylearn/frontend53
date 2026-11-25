@@ -1,0 +1,7 @@
+prompt 
+    Develope CRUD api on product table 
+    create file 16_api.js and write code into it. 
+    to Develope api, use 15_api.js file for reference. do not refer other files unneccessary 
+    this is the product table structure 
+    `product_code`, `name`, `description`, `category`, `brand`, `price`, `cost_price`, `stock`, `weight`, `is_active`, `manufacture_date`
+

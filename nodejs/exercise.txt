@@ -16,3 +16,18 @@
     Career Section 
     Alumni Registration (input should stored in file )
     Contact  (input should be stored in file )
+
+4) create api that allows user to insert / update / delete / fetch pincode. this api will work upon pincode table (id,pincode,city,state)
+
+
+5) create api that allows user to do following operation on order 
+        view order 
+        search order 
+        update order status 
+        insert new order 
+
+        order table has following structure 
+        id, orderdate, userid, orderstatus, paymentstatus, fullname, address1, address2, city, pincode, email, mobile, remarks 
+
+do not use ai to develop API
+
