@@ -1,33 +1,17 @@
-1) create nodejs example that will return name of players as unordered list of given IPL team. create server and use request & response object. 
-
-2) create nodejs example that will return below detail of given country in table format. 
-    name,
-    capital
-    currency
-    GDP
-    population 
-    continent 
-    PM/President name 
-
-3) create a website for school using html and css (can use ai). it should have below pages 
+create a website for College using html and bootstrap (can use ai). it should have below pages 
     Home, 
-    About School 
+    About us 
     Our Courses 
-    Career Section 
-    Alumni Registration (input should stored in file )
+    Staff
+    download 
     Contact  (input should be stored in file )
 
-4) create api that allows user to insert / update / delete / fetch pincode. this api will work upon pincode table (id,pincode,city,state)
+then define route for each and every pages and return web page using fs module. refer 1_routing.js file for sample code. 
 
+2) simple example of CRUD operation using list on Product (id, name,price,quantity)
+use id for update operation and delete operation.
 
-5) create api that allows user to do following operation on order 
-        view order 
-        search order 
-        update order status 
-        insert new order 
+3) add subtraction, mulitplication, division operation routes in example 4
 
-        order table has following structure 
-        id, orderdate, userid, orderstatus, paymentstatus, fullname, address1, address2, city, pincode, email, mobile, remarks 
-
-do not use ai to develop API
+4) create express js example which return product from products array which has name, price, quantity, size, weight just like example 5. return only that products whose price is given price range
 

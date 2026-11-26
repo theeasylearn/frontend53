@@ -1,7 +1,12 @@
-prompt 
-    Develope CRUD api on product table 
-    create file 16_api.js and write code into it. 
-    to Develope api, use 15_api.js file for reference. do not refer other files unneccessary 
-    this is the product table structure 
-    `product_code`, `name`, `description`, `category`, `brand`, `price`, `cost_price`, `stock`, `weight`, `is_active`, `manufacture_date`
+i want to create a file api.js file
+    which should have route for all the api defined in file 
+    14_api.js
+    15_api.js
+    16_api.js
+    whenever request is received for specific route then function defined in the particular file should run. do not edit 
+    14_api.js
+    15_api.js
+    16_api.js
+    if required create new files store speific table related api. do not unnesseary read any other files 
 
+    after task complete show how many token is used to complete task 
